@@ -1,0 +1,5 @@
+# Only track project files
+*
+!/.gitignore
+!/index.html
+!/README.md
