@@ -165,22 +165,29 @@ body.revealing .candidate-card,body.revealing .rank-chip,body.revealing .lb-row{
 }
 
 /* ===== TOUR TOGGLE ===== */
-.tour-btn{background:var(--hover);border:1px solid var(--border);border-radius:6px;padding:6px 10px;cursor:pointer;font-size:.85rem;color:var(--text);transition:all .15s ease;font-family:inherit}
-.tour-btn:hover{background:var(--border)}
-.tour-btn.active{background:var(--accent2);color:#fff;border-color:var(--accent2)}
+.tour-tabs{display:flex;border:1px solid var(--border);border-radius:6px;overflow:hidden}
+.tour-tab{padding:6px 14px;cursor:pointer;font-size:.85rem;color:var(--muted);background:var(--hover);border:none;font-family:inherit;transition:all .15s ease;border-right:1px solid var(--border)}
+.tour-tab:last-child{border-right:none}
+.tour-tab:hover{background:var(--border)}
+.tour-tab.active{background:var(--accent);color:#fff;font-weight:600}
 
 /* Hide eliminated candidates in tour 2 */
 body.tour-2 .candidate-card[data-candidate="knafo"],
-body.tour-2 .candidate-card[data-candidate="mariani"]{display:none!important}
+body.tour-2 .candidate-card[data-candidate="mariani"],
+body.tour-2 .candidate-card[data-candidate="bournazel"]{display:none!important}
 body.tour-2 th[data-cand="knafo"],
 body.tour-2 td[data-cand="knafo"],
 body.tour-2 th[data-cand="mariani"],
-body.tour-2 td[data-cand="mariani"]{display:none!important}
+body.tour-2 td[data-cand="mariani"],
+body.tour-2 th[data-cand="bournazel"],
+body.tour-2 td[data-cand="bournazel"]{display:none!important}
 body.tour-2 .rank-chip[data-cand="knafo"],
-body.tour-2 .rank-chip[data-cand="mariani"]{display:none!important}
+body.tour-2 .rank-chip[data-cand="mariani"],
+body.tour-2 .rank-chip[data-cand="bournazel"]{display:none!important}
 body.tour-2 .lb-row[data-candidate="knafo"],
-body.tour-2 .lb-row[data-candidate="mariani"]{display:none!important}
-body.tour-2 .rank-slot:nth-child(n+5){display:none}
+body.tour-2 .lb-row[data-candidate="mariani"],
+body.tour-2 .lb-row[data-candidate="bournazel"]{display:none!important}
+body.tour-2 .rank-slot:nth-child(n+4){display:none}
 
 /* Results banner */
 .results-banner{max-width:1400px;margin:0 auto 24px;padding:0 16px}
@@ -217,7 +224,7 @@ body:not(.tour-2) .elim-note{display:none}
 </div></div>
 <div class="header-right">
 <span class="filter-info" id="filterInfo" onclick="clearFilter()">✕ Filtre actif</span>
-<button class="tour-btn" id="tourBtn" onclick="toggleTour()">🗳️ 2e tour</button>
+<div class="tour-tabs"><button class="tour-tab" id="tourTab1" onclick="setTour(1)">1er tour</button><button class="tour-tab" id="tourTab2" onclick="setTour(2)">2e tour</button></div>
 <button class="anon-btn" onclick="toggleAnon()" title="Lire les propositions sans biais partisan">🎭 Mode Anonyme</button>
 <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">🌙</button>
 </div></div></header>
@@ -228,7 +235,7 @@ body:not(.tour-2) .elim-note{display:none}
 <div class="result-row"><span class="result-dot" style="background:#E4003B"></span><span class="result-name">Emmanuel Grégoire</span><div class="result-bar-wrap"><div class="result-bar" style="width:37.98%;background:#E4003B"></div></div><span class="result-pct">37,98%</span><span class="result-voix">309 693 voix</span></div>
 <div class="result-row"><span class="result-dot" style="background:#0066CC"></span><span class="result-name">Rachida Dati</span><div class="result-bar-wrap"><div class="result-bar" style="width:25.46%;background:#0066CC"></div></div><span class="result-pct">25,46%</span><span class="result-voix">207 613 voix</span></div>
 <div class="result-row"><span class="result-dot" style="background:#CC2443"></span><span class="result-name">Sophia Chikirou</span><div class="result-bar-wrap"><div class="result-bar" style="width:11.72%;background:#CC2443"></div></div><span class="result-pct">11,72%</span><span class="result-voix">95 551 voix</span></div>
-<div class="result-row"><span class="result-dot" style="background:#E8A317"></span><span class="result-name">Pierre-Yves Bournazel</span><div class="result-bar-wrap"><div class="result-bar" style="width:11.34%;background:#E8A317"></div></div><span class="result-pct">11,34%</span><span class="result-voix">92 448 voix</span></div>
+<div class="result-row" id="resultBournazel"><span class="result-dot" style="background:#E8A317"></span><span class="result-name">Pierre-Yves Bournazel</span><div class="result-bar-wrap"><div class="result-bar" style="width:11.34%;background:#E8A317"></div></div><span class="result-pct">11,34%</span><span class="result-voix">92 448 voix</span></div>
 <div class="result-row" id="resultKnafo"><span class="result-dot" style="background:#1B1464"></span><span class="result-name">Sarah Knafo</span><div class="result-bar-wrap"><div class="result-bar" style="width:10.40%;background:#1B1464"></div></div><span class="result-pct">10,40%</span><span class="result-voix">84 809 voix</span></div>
 <div class="result-row eliminated" id="resultMariani"><span class="result-dot" style="background:#0D378A"></span><span class="result-name">Thierry Mariani</span><div class="result-bar-wrap"><div class="result-bar" style="width:1.61%;background:#0D378A"></div></div><span class="result-pct">1,61%</span><span class="result-voix">13 096 voix</span></div>
 <div style="font-size:.7rem;color:var(--muted);margin-top:8px">Source : <a href="https://www.paris.fr/pages/elections-municipales-2026-la-proclamation-officielle-des-resultats-definitifs-en-video-34241" target="_blank" rel="noopener">Ville de Paris — résultats officiels</a> · 815 296 votants</div>
@@ -237,7 +244,8 @@ body:not(.tour-2) .elim-note{display:none}
 <strong>2e tour — 22 mars 2026</strong> : seules les listes ayant obtenu ≥10% des suffrages au 1er tour peuvent se maintenir.<br>
 🔴 <strong>Thierry Mariani</strong> (RN) : <strong>éliminé</strong> (1,61% &lt; 10%)<span class="elim-tag eliminated">Éliminé</span><br>
 🟤 <strong>Sarah Knafo</strong> (Reconquête) : <strong>retrait volontaire</strong> malgré 10,40%<span class="elim-tag withdrawn">Retrait</span><br>
-→ <strong>4 listes</strong> en lice : Grégoire, Dati, Chikirou, Bournazel.
+🟠 <strong>Pierre-Yves Bournazel</strong> (Horizons) : <strong>retrait au profit de Rachida Dati</strong> (11,34%)<span class="elim-tag withdrawn">Retrait</span><br>
+→ <strong>Triangulaire</strong> : Grégoire, Dati, Chikirou.
 </div></div>
 <nav class="topic-nav"><div class="topic-tabs"><button class="topic-tab" data-target="topic-securite" onclick="scrollToTopic('securite')">🛡️ Sécurité</button>
 <button class="topic-tab" data-target="topic-logement" onclick="scrollToTopic('logement')">🏠 Logement</button>
@@ -263,36 +271,37 @@ let activeFilter=null;
 const CANDS=[
 {id:"gregoire",name:"Emmanuel Grégoire",party:"PS / EELV / PCF",color:"#E4003B",initials:"EG",poll:"37.98%",r1pct:37.98,r1voix:309693},
 {id:"dati",name:"Rachida Dati",party:"LR / MoDem / UDI",color:"#0066CC",initials:"RD",poll:"25.46%",r1pct:25.46,r1voix:207613},
-{id:"bournazel",name:"Pierre-Yves Bournazel",party:"Horizons / Renaissance",color:"#E8A317",initials:"PB",poll:"11.34%",r1pct:11.34,r1voix:92448},
+{id:"bournazel",name:"Pierre-Yves Bournazel",party:"Horizons / Renaissance",color:"#E8A317",initials:"PB",poll:"11.34%",r1pct:11.34,r1voix:92448,eliminated:true,reason:"Retrait (soutien Dati)"},
 {id:"knafo",name:"Sarah Knafo",party:"Reconquête !",color:"#1B1464",initials:"SK",poll:"10.40%",r1pct:10.40,r1voix:84809,eliminated:true,reason:"Retrait"},
 {id:"chikirou",name:"Sophia Chikirou",party:"La France Insoumise",color:"#CC2443",initials:"SC",poll:"11.72%",r1pct:11.72,r1voix:95551},
 {id:"mariani",name:"Thierry Mariani",party:"Rassemblement National",color:"#0D378A",initials:"TM",poll:"1.61%",r1pct:1.61,r1voix:13096,eliminated:true,reason:"<10%"}
 ];
-const ELIMINATED_IDS=["knafo","mariani"];
+const ELIMINATED_IDS=["knafo","mariani","bournazel"];
 const TOPICS=["securite","logement","proprete","transport","ecologie","budget","enfance","culture"];
 const LS_RANKS='paris-2026-ranks-v5',LS_WEIGHTS='paris-2026-weights-v5',LS_ANON='paris-2026-anon-v5',LS_ANON_MAP='paris-2026-anon-map-v5',LS_TOUR='paris-2026-tour';
 
 /* ── Tour toggle ── */
 let currentTour=2; // default to 2e tour
-function toggleTour(){
-  currentTour=currentTour===2?1:2;
+function setTour(t){
+  currentTour=t;
   applyTour();
   localStorage.setItem(LS_TOUR,currentTour);
 }
 function applyTour(){
-  const btn=document.getElementById('tourBtn');
+  document.getElementById('tourTab1').classList.toggle('active',currentTour===1);
+  document.getElementById('tourTab2').classList.toggle('active',currentTour===2);
   if(currentTour===2){
     document.body.classList.add('tour-2');
-    btn.textContent='🗳️ 2e tour';
-    btn.classList.add('active');
     document.getElementById('resultKnafo').classList.add('eliminated');
     document.getElementById('resultKnafo').querySelector('.result-name').style.textDecoration='line-through';
+    document.getElementById('resultBournazel').classList.add('eliminated');
+    document.getElementById('resultBournazel').querySelector('.result-name').style.textDecoration='line-through';
   }else{
     document.body.classList.remove('tour-2');
-    btn.textContent='🗳️ 1er tour';
-    btn.classList.remove('active');
     document.getElementById('resultKnafo').classList.remove('eliminated');
     document.getElementById('resultKnafo').querySelector('.result-name').style.textDecoration='none';
+    document.getElementById('resultBournazel').classList.remove('eliminated');
+    document.getElementById('resultBournazel').querySelector('.result-name').style.textDecoration='none';
   }
   updateLeaderboard();
 }
