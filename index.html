@@ -164,6 +164,48 @@ body.revealing .candidate-card,body.revealing .rank-chip,body.revealing .lb-row{
 .ranking-zone,.rank-dropzone{min-height:40px}
 }
 
+/* ===== TOUR TOGGLE ===== */
+.tour-btn{background:var(--hover);border:1px solid var(--border);border-radius:6px;padding:6px 10px;cursor:pointer;font-size:.85rem;color:var(--text);transition:all .15s ease;font-family:inherit}
+.tour-btn:hover{background:var(--border)}
+.tour-btn.active{background:var(--accent2);color:#fff;border-color:var(--accent2)}
+
+/* Hide eliminated candidates in tour 2 */
+body.tour-2 .candidate-card[data-candidate="knafo"],
+body.tour-2 .candidate-card[data-candidate="mariani"]{display:none!important}
+body.tour-2 th[data-cand="knafo"],
+body.tour-2 td[data-cand="knafo"],
+body.tour-2 th[data-cand="mariani"],
+body.tour-2 td[data-cand="mariani"]{display:none!important}
+body.tour-2 .rank-chip[data-cand="knafo"],
+body.tour-2 .rank-chip[data-cand="mariani"]{display:none!important}
+body.tour-2 .lb-row[data-candidate="knafo"],
+body.tour-2 .lb-row[data-candidate="mariani"]{display:none!important}
+body.tour-2 .rank-slot:nth-child(n+5){display:none}
+
+/* Results banner */
+.results-banner{max-width:1400px;margin:0 auto 24px;padding:0 16px}
+.results-banner-inner{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:20px}
+.results-banner h3{font-size:1.1rem;margin-bottom:16px;display:flex;align-items:center;gap:8px}
+.result-row{display:flex;align-items:center;gap:10px;padding:5px 0}
+.result-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.result-name{font-size:.85rem;font-weight:600;min-width:160px}
+.result-bar-wrap{flex:1;height:22px;background:var(--hover);border-radius:4px;overflow:hidden}
+.result-bar{height:100%;border-radius:4px;transition:width .6s ease}
+.result-pct{font-size:.85rem;font-weight:700;min-width:50px;text-align:right}
+.result-voix{font-size:.7rem;color:var(--muted);min-width:100px;text-align:right}
+.result-row.eliminated{opacity:.4}
+.result-row.eliminated .result-name{text-decoration:line-through}
+@media(max-width:640px){.result-name{min-width:100px;font-size:.75rem}.result-voix{display:none}}
+
+/* Elimination note */
+.elim-note{max-width:1400px;margin:0 auto;padding:0 16px}
+.elim-note-inner{background:rgba(237,41,57,.05);border:1px solid rgba(237,41,57,.15);border-radius:8px;padding:16px;margin-bottom:16px;font-size:.85rem;color:var(--text);line-height:1.6}
+.elim-note-inner strong{color:var(--accent2)}
+.elim-tag{display:inline-block;font-size:.7rem;padding:2px 8px;border-radius:4px;margin-left:4px;font-weight:600}
+.elim-tag.eliminated{background:rgba(237,41,57,.1);color:var(--accent2)}
+.elim-tag.withdrawn{background:rgba(107,114,128,.15);color:var(--muted)}
+body:not(.tour-2) .elim-note{display:none}
+
 </style>
 </head>
 <body>
@@ -175,10 +217,28 @@ body.revealing .candidate-card,body.revealing .rank-chip,body.revealing .lb-row{
 </div></div>
 <div class="header-right">
 <span class="filter-info" id="filterInfo" onclick="clearFilter()">✕ Filtre actif</span>
+<button class="tour-btn" id="tourBtn" onclick="toggleTour()">🗳️ 2e tour</button>
 <button class="anon-btn" onclick="toggleAnon()" title="Lire les propositions sans biais partisan">🎭 Mode Anonyme</button>
 <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">🌙</button>
 </div></div></header>
-<div class="candidates-section"><h2>Les candidats</h2><div class="candidates-grid"><div class="candidate-card" data-candidate="gregoire" onclick="toggleCandidate('gregoire')"><div class="cand-avatar" style="background:#E4003B">EG</div><div class="cand-info"><div class="cand-name">Emmanuel Grégoire</div><div class="cand-party">PS / EELV / PCF</div></div><div class="cand-poll"><span class="poll-num">35%</span><span class="poll-label">Sondage Ipsos</span></div></div><div class="candidate-card" data-candidate="dati" onclick="toggleCandidate('dati')"><div class="cand-avatar" style="background:#0066CC">RD</div><div class="cand-info"><div class="cand-name">Rachida Dati</div><div class="cand-party">LR / MoDem / UDI</div></div><div class="cand-poll"><span class="poll-num">27%</span><span class="poll-label">Sondage Ipsos</span></div></div><div class="candidate-card" data-candidate="bournazel" onclick="toggleCandidate('bournazel')"><div class="cand-avatar" style="background:#E8A317">PB</div><div class="cand-info"><div class="cand-name">Pierre-Yves Bournazel</div><div class="cand-party">Horizons / Renaissance</div></div><div class="cand-poll"><span class="poll-num">11.5%</span><span class="poll-label">Sondage Ipsos</span></div></div><div class="candidate-card" data-candidate="knafo" onclick="toggleCandidate('knafo')"><div class="cand-avatar" style="background:#1B1464">SK</div><div class="cand-info"><div class="cand-name">Sarah Knafo</div><div class="cand-party">Reconquête !</div></div><div class="cand-poll"><span class="poll-num">11.5%</span><span class="poll-label">Sondage Ipsos</span></div></div><div class="candidate-card" data-candidate="chikirou" onclick="toggleCandidate('chikirou')"><div class="cand-avatar" style="background:#CC2443">SC</div><div class="cand-info"><div class="cand-name">Sophia Chikirou</div><div class="cand-party">La France Insoumise</div></div><div class="cand-poll"><span class="poll-num">10%</span><span class="poll-label">Sondage Ipsos</span></div></div><div class="candidate-card" data-candidate="mariani" onclick="toggleCandidate('mariani')"><div class="cand-avatar" style="background:#0D378A">TM</div><div class="cand-info"><div class="cand-name">Thierry Mariani</div><div class="cand-party">Rassemblement National</div></div><div class="cand-poll"><span class="poll-num">4%</span><span class="poll-label">Sondage Ipsos</span></div></div></div></div>
+<div class="candidates-section"><h2>Les candidats</h2><div class="candidates-grid"><div class="candidate-card" data-candidate="gregoire" onclick="toggleCandidate('gregoire')"><div class="cand-avatar" style="background:#E4003B">EG</div><div class="cand-info"><div class="cand-name">Emmanuel Grégoire</div><div class="cand-party">PS / EELV / PCF</div></div><div class="cand-poll"><span class="poll-num">37.98%</span><span class="poll-label">Résultat 1er tour</span></div></div><div class="candidate-card" data-candidate="dati" onclick="toggleCandidate('dati')"><div class="cand-avatar" style="background:#0066CC">RD</div><div class="cand-info"><div class="cand-name">Rachida Dati</div><div class="cand-party">LR / MoDem / UDI</div></div><div class="cand-poll"><span class="poll-num">25.46%</span><span class="poll-label">Résultat 1er tour</span></div></div><div class="candidate-card" data-candidate="bournazel" onclick="toggleCandidate('bournazel')"><div class="cand-avatar" style="background:#E8A317">PB</div><div class="cand-info"><div class="cand-name">Pierre-Yves Bournazel</div><div class="cand-party">Horizons / Renaissance</div></div><div class="cand-poll"><span class="poll-num">11.34%</span><span class="poll-label">Résultat 1er tour</span></div></div><div class="candidate-card" data-candidate="knafo" onclick="toggleCandidate('knafo')"><div class="cand-avatar" style="background:#1B1464">SK</div><div class="cand-info"><div class="cand-name">Sarah Knafo</div><div class="cand-party">Reconquête !</div></div><div class="cand-poll"><span class="poll-num">10.40%</span><span class="poll-label">Résultat 1er tour</span></div></div><div class="candidate-card" data-candidate="chikirou" onclick="toggleCandidate('chikirou')"><div class="cand-avatar" style="background:#CC2443">SC</div><div class="cand-info"><div class="cand-name">Sophia Chikirou</div><div class="cand-party">La France Insoumise</div></div><div class="cand-poll"><span class="poll-num">11.72%</span><span class="poll-label">Résultat 1er tour</span></div></div><div class="candidate-card" data-candidate="mariani" onclick="toggleCandidate('mariani')"><div class="cand-avatar" style="background:#0D378A">TM</div><div class="cand-info"><div class="cand-name">Thierry Mariani</div><div class="cand-party">Rassemblement National</div></div><div class="cand-poll"><span class="poll-num">1.61%</span><span class="poll-label">Résultat 1er tour</span></div></div></div></div>
+<div class="results-banner" id="resultsBanner">
+<div class="results-banner-inner">
+<h3>📊 Résultats officiels du 1er tour — 15 mars 2026</h3>
+<div class="result-row"><span class="result-dot" style="background:#E4003B"></span><span class="result-name">Emmanuel Grégoire</span><div class="result-bar-wrap"><div class="result-bar" style="width:37.98%;background:#E4003B"></div></div><span class="result-pct">37,98%</span><span class="result-voix">309 693 voix</span></div>
+<div class="result-row"><span class="result-dot" style="background:#0066CC"></span><span class="result-name">Rachida Dati</span><div class="result-bar-wrap"><div class="result-bar" style="width:25.46%;background:#0066CC"></div></div><span class="result-pct">25,46%</span><span class="result-voix">207 613 voix</span></div>
+<div class="result-row"><span class="result-dot" style="background:#CC2443"></span><span class="result-name">Sophia Chikirou</span><div class="result-bar-wrap"><div class="result-bar" style="width:11.72%;background:#CC2443"></div></div><span class="result-pct">11,72%</span><span class="result-voix">95 551 voix</span></div>
+<div class="result-row"><span class="result-dot" style="background:#E8A317"></span><span class="result-name">Pierre-Yves Bournazel</span><div class="result-bar-wrap"><div class="result-bar" style="width:11.34%;background:#E8A317"></div></div><span class="result-pct">11,34%</span><span class="result-voix">92 448 voix</span></div>
+<div class="result-row" id="resultKnafo"><span class="result-dot" style="background:#1B1464"></span><span class="result-name">Sarah Knafo</span><div class="result-bar-wrap"><div class="result-bar" style="width:10.40%;background:#1B1464"></div></div><span class="result-pct">10,40%</span><span class="result-voix">84 809 voix</span></div>
+<div class="result-row eliminated" id="resultMariani"><span class="result-dot" style="background:#0D378A"></span><span class="result-name">Thierry Mariani</span><div class="result-bar-wrap"><div class="result-bar" style="width:1.61%;background:#0D378A"></div></div><span class="result-pct">1,61%</span><span class="result-voix">13 096 voix</span></div>
+<div style="font-size:.7rem;color:var(--muted);margin-top:8px">Source : <a href="https://www.paris.fr/pages/elections-municipales-2026-la-proclamation-officielle-des-resultats-definitifs-en-video-34241" target="_blank" rel="noopener">Ville de Paris — résultats officiels</a> · 815 296 votants</div>
+</div></div>
+<div class="elim-note"><div class="elim-note-inner">
+<strong>2e tour — 22 mars 2026</strong> : seules les listes ayant obtenu ≥10% des suffrages au 1er tour peuvent se maintenir.<br>
+🔴 <strong>Thierry Mariani</strong> (RN) : <strong>éliminé</strong> (1,61% &lt; 10%)<span class="elim-tag eliminated">Éliminé</span><br>
+🟤 <strong>Sarah Knafo</strong> (Reconquête) : <strong>retrait volontaire</strong> malgré 10,40%<span class="elim-tag withdrawn">Retrait</span><br>
+→ <strong>4 listes</strong> en lice : Grégoire, Dati, Chikirou, Bournazel.
+</div></div>
 <nav class="topic-nav"><div class="topic-tabs"><button class="topic-tab" data-target="topic-securite" onclick="scrollToTopic('securite')">🛡️ Sécurité</button>
 <button class="topic-tab" data-target="topic-logement" onclick="scrollToTopic('logement')">🏠 Logement</button>
 <button class="topic-tab" data-target="topic-proprete" onclick="scrollToTopic('proprete')">🧹 Propreté</button>
@@ -195,21 +255,52 @@ body.revealing .candidate-card,body.revealing .rank-chip,body.revealing .lb-row{
 <button class="reveal-btn" onclick="revealCandidates()">🔓 Révéler les candidats</button>
 </div>
 <div class="synthese-section"><h2>🔎 Vue synthétique</h2><p class="synthese-subtitle">Convergences et divergences entre candidats par thématique — sans jugement de valeur.</p><div class="synthese-topic"><h3>🛡️ Sécurité</h3><div class="synthese-cols"><div class="synthese-col convergences"><h4>🤝 Convergences</h4><ul><li>Tous reconnaissent la sécurité comme priorité n°1</li><li>Consensus sur l&#x27;augmentation des effectifs de police municipale</li><li>Accord sur le besoin de vidéosurveillance (sauf Chikirou)</li></ul></div><div class="synthese-col divergences"><h4>⚡ Divergences</h4><ul><li>Armement : Grégoire et Chikirou contre, les 4 autres pour</li><li>Effectifs : de 1 000 (Grégoire) à 8 000 (Knafo) — écart de ×8</li><li>Approche : préventive (Grégoire, Chikirou) vs répressive (Knafo, Mariani)</li><li>Immigration comme cause : Knafo et Mariani oui, les autres non</li></ul></div></div></div><div class="synthese-topic"><h3>🏠 Logement</h3><div class="synthese-cols"><div class="synthese-col convergences"><h4>🤝 Convergences</h4><ul><li>Tous reconnaissent la crise du logement parisien</li><li>Consensus sur la nécessité de rénover le parc existant</li><li>Accord sur le problème des logements vacants</li></ul></div><div class="synthese-col divergences"><h4>⚡ Divergences</h4><ul><li>Logement social : +100 000 (Chikirou) vs vente de 40 000 HLM (Mariani)</li><li>Encadrement des loyers : maintien/renforcement (gauche) vs suppression (Knafo)</li><li>Airbnb : régulation forte (Grégoire) vs pas de mention (droite)</li><li>Préemptions : défendues à gauche, supprimées à droite</li></ul></div></div></div><div class="synthese-topic"><h3>🧹 Propreté</h3><div class="synthese-cols"><div class="synthese-col convergences"><h4>🤝 Convergences</h4><ul><li>Unanimité sur le constat d&#x27;échec (84% jugent Paris sale)</li><li>Accord sur le renforcement des sanctions</li></ul></div><div class="synthese-col divergences"><h4>⚡ Divergences</h4><ul><li>Privatisation : Bournazel, Knafo, Mariani pour — Grégoire, Chikirou contre — Dati mixte</li><li>Remunicipalisation : uniquement Chikirou</li><li>Technologie : Knafo mise sur l&#x27;IA, les autres sur le renforcement humain</li></ul></div></div></div><div class="synthese-topic"><h3>🚇 Transport &amp; Mobilité</h3><div class="synthese-cols"><div class="synthese-col convergences"><h4>🤝 Convergences</h4><ul><li>Tous reconnaissent les problèmes de mobilité à Paris</li></ul></div><div class="synthese-col divergences"><h4>⚡ Divergences</h4><ul><li>Périphérique : maintien 50 km/h (Grégoire) vs retour 70-90 km/h (Dati, Knafo, Mariani)</li><li>Vélo : priorité (Grégoire, Chikirou) vs frein au trafic (Knafo, Mariani)</li><li>Gratuité des transports : uniquement Chikirou</li><li>Métro de nuit : Bournazel et Grégoire pour</li></ul></div></div></div><div class="synthese-topic"><h3>🌿 Environnement &amp; Écologie</h3><div class="synthese-cols"><div class="synthese-col convergences"><h4>🤝 Convergences</h4><ul><li>Tous mentionnent la végétalisation</li><li>Accord sur la rénovation thermique (sauf Knafo et Mariani)</li></ul></div><div class="synthese-col divergences"><h4>⚡ Divergences</h4><ul><li>Priorité : 62% électorat Grégoire vs ~10% électorat Knafo/Mariani</li><li>Knafo : quasi-absent, angle mort majeur</li><li>Mariani : contradiction arbres vs voiture</li><li>Chikirou/Grégoire : 300 ha d&#x27;espaces verts, les plus ambitieux</li></ul></div></div></div><div class="synthese-topic"><h3>💰 Budget &amp; Fiscalité</h3><div class="synthese-cols"><div class="synthese-col convergences"><h4>🤝 Convergences</h4><ul><li>Tous reconnaissent le problème de la dette (9,3 Mds€)</li></ul></div><div class="synthese-col divergences"><h4>⚡ Divergences</h4><ul><li>Austérité (Bournazel, Knafo) vs investissement (Grégoire, Chikirou)</li><li>Vente de HLM : Bournazel (20 000) et Mariani (40 000) pour, les autres contre</li><li>Impôts : baisse (Knafo, Mariani) vs maintien/hausse (Chikirou)</li><li>Chiffrage : de très détaillé (Knafo, 87 propositions) à quasi-absent (Dati)</li></ul></div></div></div><div class="synthese-topic"><h3>👶 Petite Enfance &amp; Éducation</h3><div class="synthese-cols"><div class="synthese-col convergences"><h4>🤝 Convergences</h4><ul><li>Consensus sur les difficultés de recrutement en crèche</li><li>Accord sur l&#x27;importance de la sécurité des enfants (post-scandales 2025)</li></ul></div><div class="synthese-col divergences"><h4>⚡ Divergences</h4><ul><li>Knafo : diagnostic précis (7 000 places vacantes par manque de personnel)</li><li>Grégoire : cantine gratuite, mesure sociale populaire</li><li>Bournazel : intégration urbanistique (crèches en pied d&#x27;immeuble)</li><li>Mariani : mesures hors compétence (uniforme, rythme scolaire)</li></ul></div></div></div><div class="synthese-topic"><h3>🎭 Culture &amp; Patrimoine</h3><div class="synthese-cols"><div class="synthese-col convergences"><h4>🤝 Convergences</h4><ul><li>Accord sur la préservation du patrimoine parisien</li></ul></div><div class="synthese-col divergences"><h4>⚡ Divergences</h4><ul><li>Knafo : politique du beau, restauration mobilier historique — vision originale</li><li>Bournazel : angle mort complet</li><li>Chikirou : démocratisation participative</li><li>Mariani : priorisation des Parisiens (juridiquement contestable)</li></ul></div></div></div></div>
-<footer class="footer">Comparateur non-partisan · Analyse factuelle et sourcée · Aucun classement ni score imposé · Classez les candidats et créez votre propre classement<br>Données : <a href="https://www.ipsos.com/fr-fr/municipales-2026-paris-emmanuel-gregoire-en-tete-des-intentions-de-vote-devant-rachida-dati" target="_blank">Ipsos/BVA</a>, <a href="https://labo-paris.com" target="_blank">Labo Paris</a>, <a href="https://www.lakoom.fr/municipales-a-paris-securite-logement-petite-enfance/" target="_blank">Lakoom</a>, <a href="https://www.insee.fr/fr/statistiques/2134423" target="_blank">INSEE/SSMSI</a> · Sites de campagne officiels · Mars 2026</footer>
+<footer class="footer">Comparateur non-partisan · Analyse factuelle et sourcée · Aucun classement ni score imposé · Classez les candidats et créez votre propre classement<br>Résultats 1er tour : <a href="https://www.paris.fr/pages/elections-municipales-2026-la-proclamation-officielle-des-resultats-definitifs-en-video-34241" target="_blank">Ville de Paris</a> · Données : <a href="https://www.ipsos.com/fr-fr/municipales-2026-paris-emmanuel-gregoire-en-tete-des-intentions-de-vote-devant-rachida-dati" target="_blank">Ipsos/BVA</a>, <a href="https://labo-paris.com" target="_blank">Labo Paris</a>, <a href="https://www.lakoom.fr/municipales-a-paris-securite-logement-petite-enfance/" target="_blank">Lakoom</a>, <a href="https://www.insee.fr/fr/statistiques/2134423" target="_blank">INSEE/SSMSI</a> · Sites de campagne officiels · Mars 2026</footer>
 
 <script>
 
 let activeFilter=null;
 const CANDS=[
-{id:"gregoire",name:"Emmanuel Grégoire",party:"PS / EELV / PCF",color:"#E4003B",initials:"EG",poll:"35%"},
-{id:"dati",name:"Rachida Dati",party:"LR / MoDem / UDI",color:"#0066CC",initials:"RD",poll:"27%"},
-{id:"bournazel",name:"Pierre-Yves Bournazel",party:"Horizons / Renaissance",color:"#E8A317",initials:"PB",poll:"11.5%"},
-{id:"knafo",name:"Sarah Knafo",party:"Reconquête !",color:"#1B1464",initials:"SK",poll:"11.5%"},
-{id:"chikirou",name:"Sophia Chikirou",party:"La France Insoumise",color:"#CC2443",initials:"SC",poll:"10%"},
-{id:"mariani",name:"Thierry Mariani",party:"Rassemblement National",color:"#0D378A",initials:"TM",poll:"4%"}
+{id:"gregoire",name:"Emmanuel Grégoire",party:"PS / EELV / PCF",color:"#E4003B",initials:"EG",poll:"37.98%",r1pct:37.98,r1voix:309693},
+{id:"dati",name:"Rachida Dati",party:"LR / MoDem / UDI",color:"#0066CC",initials:"RD",poll:"25.46%",r1pct:25.46,r1voix:207613},
+{id:"bournazel",name:"Pierre-Yves Bournazel",party:"Horizons / Renaissance",color:"#E8A317",initials:"PB",poll:"11.34%",r1pct:11.34,r1voix:92448},
+{id:"knafo",name:"Sarah Knafo",party:"Reconquête !",color:"#1B1464",initials:"SK",poll:"10.40%",r1pct:10.40,r1voix:84809,eliminated:true,reason:"Retrait"},
+{id:"chikirou",name:"Sophia Chikirou",party:"La France Insoumise",color:"#CC2443",initials:"SC",poll:"11.72%",r1pct:11.72,r1voix:95551},
+{id:"mariani",name:"Thierry Mariani",party:"Rassemblement National",color:"#0D378A",initials:"TM",poll:"1.61%",r1pct:1.61,r1voix:13096,eliminated:true,reason:"<10%"}
 ];
+const ELIMINATED_IDS=["knafo","mariani"];
 const TOPICS=["securite","logement","proprete","transport","ecologie","budget","enfance","culture"];
-const LS_RANKS='paris-2026-ranks-v5',LS_WEIGHTS='paris-2026-weights-v5',LS_ANON='paris-2026-anon-v5',LS_ANON_MAP='paris-2026-anon-map-v5';
+const LS_RANKS='paris-2026-ranks-v5',LS_WEIGHTS='paris-2026-weights-v5',LS_ANON='paris-2026-anon-v5',LS_ANON_MAP='paris-2026-anon-map-v5',LS_TOUR='paris-2026-tour';
+
+/* ── Tour toggle ── */
+let currentTour=2; // default to 2e tour
+function toggleTour(){
+  currentTour=currentTour===2?1:2;
+  applyTour();
+  localStorage.setItem(LS_TOUR,currentTour);
+}
+function applyTour(){
+  const btn=document.getElementById('tourBtn');
+  if(currentTour===2){
+    document.body.classList.add('tour-2');
+    btn.textContent='🗳️ 2e tour';
+    btn.classList.add('active');
+    document.getElementById('resultKnafo').classList.add('eliminated');
+    document.getElementById('resultKnafo').querySelector('.result-name').style.textDecoration='line-through';
+  }else{
+    document.body.classList.remove('tour-2');
+    btn.textContent='🗳️ 1er tour';
+    btn.classList.remove('active');
+    document.getElementById('resultKnafo').classList.remove('eliminated');
+    document.getElementById('resultKnafo').querySelector('.result-name').style.textDecoration='none';
+  }
+  updateLeaderboard();
+}
+function initTour(){
+  const saved=localStorage.getItem(LS_TOUR);
+  if(saved)currentTour=parseInt(saved);
+  applyTour();
+}
 
 /* ── Candidate filter ── */
 function toggleCandidate(id){
@@ -382,22 +473,22 @@ updateLeaderboard();
 
 function updateLeaderboard(){
 const ranks=loadRanks(),weights=loadWeights();
-// For each candidate, compute weighted score from rankings
-// Ranking 1 = best = score 6, ranking 6 = worst = score 1
-// Unranked = excluded from calculation
+const activeCands=currentTour===2?CANDS.filter(c=>!ELIMINATED_IDS.includes(c.id)):CANDS;
 const scores={};
-CANDS.forEach(c=>{let num=0,den=0;
+activeCands.forEach(c=>{let num=0,den=0;
 TOPICS.forEach(tid=>{
   const w=weights[tid]!==undefined?weights[tid]:5;
   if(w===0)return;
   const r=ranks[tid]&&ranks[tid][c.id];
   if(r===undefined||r===null)return;
-  const score=7-r; // rank 1->6pts, rank 6->1pt
+  const maxRank=activeCands.length;
+  const score=maxRank+1-r;
   num+=score*w;den+=w;
 });
 scores[c.id]=den>0?num/den:null;
 });
-const maxScore=6; // theoretical max
+const activeCandCount=currentTour===2?CANDS.filter(c=>!ELIMINATED_IDS.includes(c.id)).length:CANDS.length;
+const maxScore=activeCandCount; // theoretical max
 const sorted=CANDS.map(c=>({...c,score:scores[c.id]})).sort((a,b)=>{
 if(a.score===null&&b.score===null)return 0;
 if(a.score===null)return 1;if(b.score===null)return -1;
@@ -430,8 +521,11 @@ try{const m=JSON.parse(localStorage.getItem(LS_ANON_MAP));if(m&&Object.keys(m).l
 return generateAnonMap();
 }
 function generateAnonMap(){
-const letters=shuffleArray(['A','B','C','D','E','F']);
-const m={};CANDS.forEach((c,i)=>{m[c.id]='Candidat '+letters[i]});
+const activeCands=currentTour===2?CANDS.filter(c=>!ELIMINATED_IDS.includes(c.id)):CANDS;
+const letters=shuffleArray(['A','B','C','D','E','F'].slice(0,activeCands.length));
+const m={};activeCands.forEach((c,i)=>{m[c.id]='Candidat '+letters[i]});
+// Also map eliminated to keep structure intact
+CANDS.filter(c=>ELIMINATED_IDS.includes(c.id)).forEach(c=>{m[c.id]=m[c.id]||'Candidat X'});
 localStorage.setItem(LS_ANON_MAP,JSON.stringify(m));return m;
 }
 
@@ -614,6 +708,7 @@ function initAnon(){
 }
 
 (function(){
+  initTour();
   initRanks();
   initDragDrop();
   initAnon();
