@@ -39,7 +39,7 @@ a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
 .cand-info{flex:1;min-width:0}.cand-name{font-weight:700;font-size:.95rem}.cand-party{font-size:.75rem;color:var(--muted)}
 .cand-poll{text-align:center;flex-shrink:0}.poll-num{font-size:1.2rem;font-weight:700;display:block}.poll-label{font-size:.6rem;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
 
-.topic-nav{max-width:1400px;margin:0 auto;padding:8px 16px;position:sticky;top:56px;z-index:90;background:var(--bg)}
+.topic-nav{max-width:1400px;margin:0 auto;padding:8px 16px;position:sticky;top:110px;z-index:90;background:var(--bg)}
 .topic-tabs{display:flex;gap:6px;overflow-x:auto;padding:4px 0;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .topic-tabs::-webkit-scrollbar{display:none}
 .topic-tab{white-space:nowrap;padding:8px 14px;border-radius:20px;border:1px solid var(--border);background:var(--surface);font-size:.8rem;cursor:pointer;color:var(--text);flex-shrink:0;transition:all .15s ease}
@@ -161,7 +161,7 @@ body.revealing .candidate-card,body.revealing .rank-chip,body.revealing .lb-row{
 
 @media(max-width:640px){
 .candidates-grid{grid-template-columns:1fr}
-.header-title{font-size:.9rem}.topic-nav{top:48px}
+.header-title{font-size:.9rem}.topic-nav{top:100px}
 .compare-matrix{margin:0 -16px;border-radius:0;border-left:none;border-right:none}
 .wt-row label{min-width:120px;font-size:.7rem}
 .ranking-zone,.rank-dropzone{min-height:40px}
@@ -191,6 +191,22 @@ body.tour-2 .lb-row[data-candidate="knafo"],
 body.tour-2 .lb-row[data-candidate="mariani"],
 body.tour-2 .lb-row[data-candidate="bournazel"]{display:none!important}
 body.tour-2 .rank-slot:nth-child(n+4){display:none}
+
+/* ===== MAIN VIEW TABS ===== */
+.main-view-tabs{max-width:1400px;margin:16px auto 0;padding:0 16px;display:flex;gap:0;position:sticky;top:56px;z-index:95;background:var(--bg);padding-bottom:8px}
+.main-view-tab{flex:1;padding:12px 20px;border:1px solid var(--border);background:var(--surface);font-size:.95rem;font-weight:600;cursor:pointer;color:var(--muted);transition:all .15s ease;font-family:inherit;text-align:center}
+.main-view-tab:first-child{border-radius:8px 0 0 8px}
+.main-view-tab:last-child{border-radius:0 8px 8px 0;border-left:none}
+.main-view-tab:hover{background:var(--hover)}
+.main-view-tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+/* View toggling */
+body.view-resultats .topic-nav,
+body.view-resultats .topics-container,
+body.view-resultats .synthese-section{display:none!important}
+body.view-comparaison .results-banner,
+body.view-comparaison .leaderboard-section,
+body.view-comparaison .reveal-section{display:none!important}
 
 /* Results banner */
 .results-banner{max-width:1400px;margin:0 auto 24px;padding:0 16px}
@@ -250,6 +266,10 @@ body:not(.tour-2) .elim-note{display:none}
 🟠 <strong>Pierre-Yves Bournazel</strong> (Horizons) : <strong>retrait au profit de Rachida Dati</strong> (11,34%)<span class="elim-tag withdrawn">Retrait</span><br>
 → <strong>Triangulaire</strong> : Grégoire, Dati, Chikirou.
 </div></div>
+<div class="main-view-tabs" id="mainViewTabs">
+<button class="main-view-tab active" data-view="resultats" onclick="switchMainView('resultats')">📊 Résultats</button>
+<button class="main-view-tab" data-view="comparaison" onclick="switchMainView('comparaison')">📋 Comparaison des programmes</button>
+</div>
 <nav class="topic-nav"><div class="topic-tabs"><button class="topic-tab" data-target="topic-securite" onclick="scrollToTopic('securite')">🛡️ Sécurité</button>
 <button class="topic-tab" data-target="topic-logement" onclick="scrollToTopic('logement')">🏠 Logement</button>
 <button class="topic-tab" data-target="topic-proprete" onclick="scrollToTopic('proprete')">🧹 Propreté</button>
@@ -719,6 +739,24 @@ function initAnon(){
     localStorage.setItem(LS_ANON,'1');
   }
 }
+
+/* ── Main View Tabs ── */
+function switchMainView(view){
+  document.body.classList.remove('view-resultats','view-comparaison');
+  document.body.classList.add('view-'+view);
+  document.querySelectorAll('.main-view-tab').forEach(function(t){
+    t.classList.toggle('active',t.getAttribute('data-view')===view);
+  });
+  localStorage.setItem('lmv-main-view',view);
+  window.scrollTo({top:document.getElementById('mainViewTabs').offsetTop-70,behavior:'smooth'});
+}
+(function initMainView(){
+  var saved=localStorage.getItem('lmv-main-view')||'resultats';
+  document.body.classList.add('view-'+saved);
+  document.querySelectorAll('.main-view-tab').forEach(function(t){
+    t.classList.toggle('active',t.getAttribute('data-view')===saved);
+  });
+})();
 
 (function(){
   initTour();
