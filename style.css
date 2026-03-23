@@ -213,6 +213,8 @@ body.view-comparaison .results-banner{display:none!important}
 .result-voix{font-size:.7rem;color:var(--muted);min-width:100px;text-align:right}
 .result-row.eliminated{opacity:.4}
 .result-row.eliminated .result-name{text-decoration:line-through}
+.result-row.winner .result-name{font-weight:700;font-size:1.05rem}
+.result-row.winner .result-pct{font-weight:700;font-size:1.05rem}
 @media(max-width:640px){.result-name{min-width:100px;font-size:.75rem}.result-voix{display:none}}
 
 /* Elimination note */

@@ -1,11 +1,11 @@
 
 let activeFilter=null;
 const CANDS=[
-{id:"gregoire",name:"Emmanuel Grégoire",party:"PS / EELV / PCF",color:"#E4003B",initials:"EG",poll:"37.98%",r1pct:37.98,r1voix:309693},
-{id:"dati",name:"Rachida Dati",party:"LR / MoDem / UDI",color:"#0066CC",initials:"RD",poll:"25.46%",r1pct:25.46,r1voix:207613},
+{id:"gregoire",name:"Emmanuel Grégoire",party:"PS / EELV / PCF",color:"#E4003B",initials:"EG",poll:"37.98%",r1pct:37.98,r1voix:309693,r2pct:50.52,r2voix:428143},
+{id:"dati",name:"Rachida Dati",party:"LR / MoDem / UDI",color:"#0066CC",initials:"RD",poll:"25.46%",r1pct:25.46,r1voix:207613,r2pct:41.52,r2voix:351825},
 {id:"bournazel",name:"Pierre-Yves Bournazel",party:"Horizons / Renaissance",color:"#E8A317",initials:"PB",poll:"11.34%",r1pct:11.34,r1voix:92448,eliminated:true,reason:"Retrait (soutien Dati)"},
 {id:"knafo",name:"Sarah Knafo",party:"Reconquête !",color:"#1B1464",initials:"SK",poll:"10.40%",r1pct:10.40,r1voix:84809,eliminated:true,reason:"Retrait"},
-{id:"chikirou",name:"Sophia Chikirou",party:"La France Insoumise",color:"#CC2443",initials:"SC",poll:"11.72%",r1pct:11.72,r1voix:95551},
+{id:"chikirou",name:"Sophia Chikirou",party:"La France Insoumise",color:"#CC2443",initials:"SC",poll:"11.72%",r1pct:11.72,r1voix:95551,r2pct:7.96,r2voix:67464},
 {id:"mariani",name:"Thierry Mariani",party:"Rassemblement National",color:"#0D378A",initials:"TM",poll:"1.61%",r1pct:1.61,r1voix:13096,eliminated:true,reason:"<10%"}
 ];
 const ELIMINATED_IDS=["knafo","mariani","bournazel"];
@@ -22,6 +22,11 @@ function setTour(t){
 function applyTour(){
   document.getElementById('tourTab1').classList.toggle('active',currentTour===1);
   document.getElementById('tourTab2').classList.toggle('active',currentTour===2);
+  // Toggle results banners
+  var r1=document.getElementById('resultsBannerR1');
+  var r2=document.getElementById('resultsBannerR2');
+  if(r1)r1.style.display=currentTour===1?'':'none';
+  if(r2)r2.style.display=currentTour===2?'':'none';
   if(currentTour===2){
     document.body.classList.add('tour-2');
     document.getElementById('resultKnafo').classList.add('eliminated');
@@ -36,6 +41,20 @@ function applyTour(){
     document.getElementById('resultBournazel').querySelector('.result-name').style.textDecoration='none';
   }
   updateLeaderboard();
+  // Update candidate card poll numbers for tour
+  CANDS.forEach(function(c){
+    var card=document.querySelector('.candidate-card[data-candidate="'+c.id+'"]');
+    if(!card)return;
+    var numEl=card.querySelector('.poll-num');
+    var labelEl=card.querySelector('.poll-label');
+    if(currentTour===2 && c.r2pct){
+      numEl.textContent=c.r2pct.toFixed(2).replace('.',',')+' %';
+      labelEl.textContent='Résultat 2e tour';
+    }else{
+      numEl.textContent=c.r1pct.toFixed(2).replace('.',',')+' %';
+      labelEl.textContent='Résultat 1er tour';
+    }
+  });
 }
 function initTour(){
   const saved=localStorage.getItem(LS_TOUR);
