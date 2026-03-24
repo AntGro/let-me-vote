@@ -9,10 +9,10 @@
 </head>
 <body>
 <header class="header"><div class="header-inner">
-<div class="header-left"><span class="header-flag">🇫🇷</span><div>
-<div class="header-title">Municipales Paris 2026 — Comparateur de programmes</div>
-<div class="header-subtitle">Analyse factuelle et sourcée · Aucun classement ni score imposé · Classez selon votre propre analyse</div>
-<div class="header-date">1er tour : 15 mars · 2nd tour : 22 mars</div>
+<div class="header-left"><span class="header-flag" id="headerFlag">🇫🇷</span><div>
+<div class="header-title-row"><div class="header-title" id="headerTitle">Chargement…</div><select class="election-select" id="electionSelect" onchange="switchElection(this.value)"></select></div>
+<div class="header-subtitle" id="headerSubtitle"></div>
+<div class="header-date" id="headerDate"></div>
 </div></div>
 <div class="header-right">
 <span class="filter-info" id="filterInfo" onclick="clearFilter()">✕ Filtre actif</span>
@@ -42,14 +42,7 @@
 <div class="lb-container">
 <div class="lb-weights">
 <h3>Pondération des thématiques</h3>
-<div class="wt-row"><label>🛡️ Sécurité</label><input type="range" min="0" max="10" value="5" class="wt-slider" data-topic="securite" oninput="onWeight(this)"><span class="wt-val" id="wv-securite">5</span></div>
-<div class="wt-row"><label>🏠 Logement</label><input type="range" min="0" max="10" value="5" class="wt-slider" data-topic="logement" oninput="onWeight(this)"><span class="wt-val" id="wv-logement">5</span></div>
-<div class="wt-row"><label>🧹 Propreté</label><input type="range" min="0" max="10" value="5" class="wt-slider" data-topic="proprete" oninput="onWeight(this)"><span class="wt-val" id="wv-proprete">5</span></div>
-<div class="wt-row"><label>🚇 Transport &amp; Mobilité</label><input type="range" min="0" max="10" value="5" class="wt-slider" data-topic="transport" oninput="onWeight(this)"><span class="wt-val" id="wv-transport">5</span></div>
-<div class="wt-row"><label>🌿 Environnement &amp; Écologie</label><input type="range" min="0" max="10" value="5" class="wt-slider" data-topic="ecologie" oninput="onWeight(this)"><span class="wt-val" id="wv-ecologie">5</span></div>
-<div class="wt-row"><label>💰 Budget &amp; Fiscalité</label><input type="range" min="0" max="10" value="5" class="wt-slider" data-topic="budget" oninput="onWeight(this)"><span class="wt-val" id="wv-budget">5</span></div>
-<div class="wt-row"><label>👶 Petite Enfance &amp; Éducation</label><input type="range" min="0" max="10" value="5" class="wt-slider" data-topic="enfance" oninput="onWeight(this)"><span class="wt-val" id="wv-enfance">5</span></div>
-<div class="wt-row"><label>🎭 Culture &amp; Patrimoine</label><input type="range" min="0" max="10" value="5" class="wt-slider" data-topic="culture" oninput="onWeight(this)"><span class="wt-val" id="wv-culture">5</span></div>
+<div id="lbWeightsContainer"></div>
 </div>
 <div class="lb-results">
 <h3>Classement</h3>

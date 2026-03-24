@@ -1,0 +1,11 @@
+{
+  "elections": [
+    {
+      "id": "paris-2026",
+      "label": "Municipales Paris 2026",
+      "file": "elections/paris-2026.json",
+      "flag": "🇫🇷",
+      "default": true
+    }
+  ]
+}

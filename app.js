@@ -1,18 +1,66 @@
 /* ═══════════════════════════════════════════════════════════════
-   Municipales Paris 2026 — Rendering Engine + Interactive Logic
+   Let Me Vote — Rendering Engine + Interactive Logic
    ═══════════════════════════════════════════════════════════════ */
 
-let DATA = null; // election.json data
+let DATA = null; // election data
+let ELECTIONS = []; // available elections
+let currentElectionId = null;
 let activeFilter = null;
-const ELIMINATED_IDS = ['knafo', 'mariani', 'bournazel'];
-const LS_RANKS = 'paris-2026-ranks-v5', LS_WEIGHTS = 'paris-2026-weights-v5',
-      LS_ANON = 'paris-2026-anon-v5', LS_ANON_MAP = 'paris-2026-anon-map-v5',
-      LS_TOUR = 'paris-2026-tour';
+let ELIMINATED_IDS = [];
+
+function lsKey(base) { return (currentElectionId || 'default') + '-' + base; }
 
 /* ── Bootstrap ── */
 async function init() {
-  const resp = await fetch('election.json');
+  // Load election index
+  try {
+    const idx = await fetch('elections/index.json');
+    const index = await idx.json();
+    ELECTIONS = index.elections || [];
+  } catch(e) {
+    // Fallback: single election.json
+    ELECTIONS = [{ id: 'default', label: 'Élection', file: 'election.json', flag: '🗳️', default: true }];
+  }
+
+  // Populate selector
+  const select = document.getElementById('electionSelect');
+  ELECTIONS.forEach(e => {
+    const opt = document.createElement('option');
+    opt.value = e.id;
+    opt.textContent = e.label;
+    select.appendChild(opt);
+  });
+
+  // Hide selector if only one election
+  if (ELECTIONS.length <= 1) select.style.display = 'none';
+
+  // Load saved or default election
+  const saved = localStorage.getItem('lmv-election');
+  const defaultEl = ELECTIONS.find(e => e.default) || ELECTIONS[0];
+  const toLoad = (saved && ELECTIONS.find(e => e.id === saved)) || defaultEl;
+
+  select.value = toLoad.id;
+  await loadElection(toLoad.id);
+}
+
+async function loadElection(electionId) {
+  const el = ELECTIONS.find(e => e.id === electionId);
+  if (!el) return;
+
+  currentElectionId = el.id;
+  localStorage.setItem('lmv-election', el.id);
+
+  const resp = await fetch(el.file);
   DATA = await resp.json();
+  ELIMINATED_IDS = DATA.eliminated_ids || [];
+
+  // Update header
+  document.getElementById('headerFlag').textContent = el.flag || '🗳️';
+  document.getElementById('headerTitle').textContent = DATA.meta.title;
+  document.getElementById('headerSubtitle').textContent = DATA.meta.subtitle;
+  document.getElementById('headerDate').textContent = DATA.meta.dates;
+  document.title = DATA.meta.title;
+
   renderAll();
   initTour();
   initRanks();
@@ -21,12 +69,18 @@ async function init() {
   initMainView();
 }
 
+async function switchElection(electionId) {
+  clearFilter();
+  await loadElection(electionId);
+}
+
 function renderAll() {
   renderCandidates();
   renderResultsBanners();
   renderEliminations();
   renderTopicNav();
   renderTopics();
+  renderLeaderboardWeights();
   renderSynthese();
   renderLeaderboard();
   renderFooter();
@@ -231,6 +285,17 @@ function renderSynthese() {
     renderSyntheseSection(syn.r2, 'tour2-only', '🔎 Vue synthétique — Triangulaire', 'Convergences et divergences entre les 3 candidats du 2nd tour — sans jugement de valeur.');
 }
 
+function renderLeaderboardWeights() {
+  const container = document.getElementById('lbWeightsContainer');
+  container.innerHTML = DATA.topics.map(t => `
+    <div class="wt-row">
+      <label>${t.icon} ${t.name}</label>
+      <input type="range" min="0" max="10" value="5" class="wt-slider" data-topic="${t.id}" oninput="onWeight(this)">
+      <span class="wt-val" id="wv-${t.id}">5</span>
+    </div>
+  `).join('');
+}
+
 function renderLeaderboard() {
   const container = document.getElementById('lbResults');
   container.innerHTML = DATA.candidates.map(c => `
@@ -247,7 +312,13 @@ function renderLeaderboard() {
 
 function renderFooter() {
   const footer = document.getElementById('siteFooter');
-  footer.innerHTML = `Comparateur non-partisan · Analyse factuelle et sourcée · Aucun classement ni score imposé · Classez les candidats et créez votre propre classement<br>Résultats 1er tour : <a href="${DATA.results.r1.source.url}" target="_blank">${DATA.results.r1.source.name.split(' — ')[0]}</a> · Données : <a href="https://www.ipsos.com/fr-fr/municipales-2026-paris-emmanuel-gregoire-en-tete-des-intentions-de-vote-devant-rachida-dati" target="_blank">Ipsos/BVA</a>, <a href="https://labo-paris.com" target="_blank">Labo Paris</a>, <a href="https://www.lakoom.fr/municipales-a-paris-securite-logement-petite-enfance/" target="_blank">Lakoom</a>, <a href="https://www.insee.fr/fr/statistiques/2134423" target="_blank">INSEE/SSMSI</a> · Sites de campagne officiels · Mars 2026`;
+  const ft = DATA.footer;
+  if (ft) {
+    const sourceLinks = (ft.sources || []).map(s => `<a href="${s.url}" target="_blank">${s.name}</a>`).join(' · ');
+    footer.innerHTML = ft.text + (sourceLinks ? '<br>' + sourceLinks : '');
+  } else {
+    footer.innerHTML = `Comparateur non-partisan · Analyse factuelle et sourcée · Aucun classement ni score imposé`;
+  }
 }
 
 /* ═══════════════════════════════════════
@@ -259,7 +330,7 @@ let currentTour = 2;
 function setTour(t) {
   currentTour = t;
   applyTour();
-  localStorage.setItem(LS_TOUR, currentTour);
+  localStorage.setItem(lsKey('tour'), currentTour);
 }
 function applyTour() {
   document.getElementById('tourTab1').classList.toggle('active', currentTour === 1);
@@ -298,7 +369,7 @@ function applyTour() {
   });
 }
 function initTour() {
-  const saved = localStorage.getItem(LS_TOUR);
+  const saved = localStorage.getItem(lsKey('tour'));
   if (saved) currentTour = parseInt(saved);
   applyTour();
 }
@@ -361,10 +432,10 @@ function toggleTheme() {
 })();
 
 /* ── Rankings persistence ── */
-function loadRanks() { try { return JSON.parse(localStorage.getItem(LS_RANKS)) || {}; } catch(e) { return {}; } }
-function saveRanks(r) { localStorage.setItem(LS_RANKS, JSON.stringify(r)); }
-function loadWeights() { try { return JSON.parse(localStorage.getItem(LS_WEIGHTS)) || {}; } catch(e) { return {}; } }
-function saveWeights(w) { localStorage.setItem(LS_WEIGHTS, JSON.stringify(w)); }
+function loadRanks() { try { return JSON.parse(localStorage.getItem(lsKey('ranks'))) || {}; } catch(e) { return {}; } }
+function saveRanks(r) { localStorage.setItem(lsKey('ranks'), JSON.stringify(r)); }
+function loadWeights() { try { return JSON.parse(localStorage.getItem(lsKey('weights'))) || {}; } catch(e) { return {}; } }
+function saveWeights(w) { localStorage.setItem(lsKey('weights'), JSON.stringify(w)); }
 
 /* ── Drag and drop ── */
 let draggedChip = null;
@@ -525,7 +596,7 @@ function updateLeaderboard() {
 function shuffleArray(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
 
 function getAnonMap() {
-  try { const m = JSON.parse(localStorage.getItem(LS_ANON_MAP)); if (m && Object.keys(m).length === DATA.candidates.length) return m; } catch(e) {}
+  try { const m = JSON.parse(localStorage.getItem(lsKey('anon-map'))); if (m && Object.keys(m).length === DATA.candidates.length) return m; } catch(e) {}
   return generateAnonMap();
 }
 function generateAnonMap() {
@@ -534,7 +605,7 @@ function generateAnonMap() {
   const m = {};
   activeCands.forEach((c, i) => { m[c.id] = 'Candidat ' + letters[i]; });
   DATA.candidates.filter(c => ELIMINATED_IDS.includes(c.id)).forEach(c => { m[c.id] = m[c.id] || 'Candidat X'; });
-  localStorage.setItem(LS_ANON_MAP, JSON.stringify(m));
+  localStorage.setItem(lsKey('anon-map'), JSON.stringify(m));
   return m;
 }
 
@@ -547,7 +618,7 @@ function toggleAnon() {
   sortColumnsAlphabetically(map);
   document.querySelector('.anon-btn').classList.add('active');
   document.querySelector('.anon-btn').textContent = '🎭 Anonyme ✓';
-  localStorage.setItem(LS_ANON, '1');
+  localStorage.setItem(lsKey('anon'), '1');
   updateLeaderboard();
 }
 
@@ -646,7 +717,7 @@ function revealCandidates() {
   restoreTableColumns();
   document.querySelector('.anon-btn').classList.remove('active');
   document.querySelector('.anon-btn').textContent = '🎭 Mode Anonyme';
-  localStorage.setItem(LS_ANON, '0');
+  localStorage.setItem(lsKey('anon'), '0');
   updateLeaderboard();
   if (activeFilter) {
     const names = {gregoire:'E. Grégoire',dati:'R. Dati',bournazel:'P-Y. Bournazel',knafo:'S. Knafo',chikirou:'S. Chikirou',mariani:'T. Mariani'};
@@ -656,7 +727,7 @@ function revealCandidates() {
 }
 
 function resetAll() {
-  localStorage.removeItem(LS_RANKS); localStorage.removeItem(LS_WEIGHTS);
+  localStorage.removeItem(lsKey('ranks')); localStorage.removeItem(lsKey('weights'));
   const TOPICS = DATA.topics.map(t => t.id);
   TOPICS.forEach(tid => {
     const pool = document.getElementById('pool-' + tid);
@@ -694,7 +765,7 @@ function initRanks() {
 }
 
 function initAnon() {
-  const wasRevealed = localStorage.getItem(LS_ANON) === '0';
+  const wasRevealed = localStorage.getItem(lsKey('anon')) === '0';
   if (!wasRevealed) {
     const map = generateAnonMap();
     document.body.classList.add('anon-mode');
@@ -702,7 +773,7 @@ function initAnon() {
     sortColumnsAlphabetically(map);
     document.querySelector('.anon-btn').classList.add('active');
     document.querySelector('.anon-btn').textContent = '🎭 Anonyme ✓';
-    localStorage.setItem(LS_ANON, '1');
+    localStorage.setItem(lsKey('anon'), '1');
   }
 }
 

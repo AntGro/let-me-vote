@@ -2862,5 +2862,30 @@
         ]
       }
     }
+  },
+  "footer": {
+    "text": "Comparateur non-partisan · Analyse factuelle et sourcée · Aucun classement ni score imposé · Classez les candidats et créez votre propre classement",
+    "sources": [
+      {
+        "url": "https://www.paris.fr/pages/elections-municipales-2026-la-proclamation-officielle-des-resultats-definitifs-en-video-34241",
+        "name": "Ville de Paris — résultats officiels"
+      },
+      {
+        "url": "https://www.ipsos.com/fr-fr/municipales-2026-paris-emmanuel-gregoire-en-tete-des-intentions-de-vote-devant-rachida-dati",
+        "name": "Ipsos/BVA"
+      },
+      {
+        "url": "https://labo-paris.com",
+        "name": "Labo Paris"
+      },
+      {
+        "url": "https://www.lakoom.fr/municipales-a-paris-securite-logement-petite-enfance/",
+        "name": "Lakoom"
+      },
+      {
+        "url": "https://www.insee.fr/fr/statistiques/2134423",
+        "name": "INSEE/SSMSI"
+      }
+    ]
   }
 }

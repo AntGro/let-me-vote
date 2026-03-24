@@ -4,6 +4,7 @@
 !/index.html
 !/style.css
 !/app.js
-!/election.json
 !/README.md
 !/AGENT.md
+!/elections/
+!/elections/**

@@ -5,13 +5,32 @@ Non-partisan election comparison platform. Data-driven: all content lives in `el
 ## Architecture
 
 ```
-index.html       → Minimal shell (5KB). Containers, header, script/style refs. No data.
-style.css        → All styling. Dark/light theme. Responsive. Don't touch unless redesigning.
-app.js           → Rendering engine + interactive logic. Reads election.json, builds full UI.
-election.json    → ALL election data. Every fact, every candidate, every topic. THE source of truth.
+index.html           → Minimal shell (5KB). Containers, header, script/style refs. No data.
+style.css            → All styling. Dark/light theme. Responsive. Don't touch unless redesigning.
+app.js               → Rendering engine + interactive logic. Reads election data, builds full UI.
+elections/
+  index.json         → Registry of all available elections
+  paris-2026.json    → Paris 2026 municipal election data
+  <future>.json      → Add new elections here
 ```
 
-**Golden rule**: to change content (candidates, positions, facts, results), edit `election.json` only. Never hardcode data in `index.html` or `app.js`.
+**Golden rule**: to change content (candidates, positions, facts, results), edit the election JSON only. Never hardcode data in `index.html` or `app.js`.
+
+### Adding a new election
+
+1. Create `elections/<id>.json` following the schema below
+2. Add an entry to `elections/index.json`:
+```json
+{
+  "id": "lyon-2026",
+  "label": "Municipales Lyon 2026",
+  "file": "elections/lyon-2026.json",
+  "flag": "🇫🇷",
+  "default": false
+}
+```
+3. The header dropdown automatically shows all available elections
+4. No code changes needed — the engine is election-agnostic
 
 ## election.json Schema
 
