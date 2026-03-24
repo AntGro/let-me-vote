@@ -13,7 +13,7 @@ const TOPICS=["securite","logement","proprete","transport","ecologie","budget","
 const LS_RANKS='paris-2026-ranks-v5',LS_WEIGHTS='paris-2026-weights-v5',LS_ANON='paris-2026-anon-v5',LS_ANON_MAP='paris-2026-anon-map-v5',LS_TOUR='paris-2026-tour';
 
 /* ── Tour toggle ── */
-let currentTour=2; // default to second tour
+let currentTour=2; // default to 2nd tour
 function setTour(t){
   currentTour=t;
   applyTour();
@@ -49,7 +49,7 @@ function applyTour(){
     var labelEl=card.querySelector('.poll-label');
     if(currentTour===2 && c.r2pct){
       numEl.textContent=c.r2pct.toFixed(2).replace('.',',')+' %';
-      labelEl.textContent='Résultat second tour';
+      labelEl.textContent='Résultat 2nd tour';
     }else{
       numEl.textContent=c.r1pct.toFixed(2).replace('.',',')+' %';
       labelEl.textContent='Résultat 1er tour';
