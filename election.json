@@ -1,0 +1,2866 @@
+{
+  "meta": {
+    "title": "Municipales Paris 2026 — Comparateur de programmes",
+    "subtitle": "Analyse factuelle et sourcée · Aucun classement ni score imposé · Classez selon votre propre analyse",
+    "dates": "1er tour : 15 mars · 2nd tour : 22 mars",
+    "last_updated": "2026-03-24",
+    "verified_date": "2026-03-24"
+  },
+  "candidates": [
+    {
+      "id": "gregoire",
+      "name": "Emmanuel Grégoire",
+      "party": "PS / EELV / PCF",
+      "color": "#E4003B",
+      "initials": "EG",
+      "r1_pct": 37.98,
+      "r1_voix": 309693,
+      "r2_pct": 50.52,
+      "r2_voix": 428143,
+      "eliminated": false
+    },
+    {
+      "id": "dati",
+      "name": "Rachida Dati",
+      "party": "LR / MoDem / UDI",
+      "color": "#0066CC",
+      "initials": "RD",
+      "r1_pct": 25.46,
+      "r1_voix": 207613,
+      "r2_pct": 41.52,
+      "r2_voix": 351825,
+      "eliminated": false
+    },
+    {
+      "id": "bournazel",
+      "name": "Pierre-Yves Bournazel",
+      "party": "Horizons / Renaissance",
+      "color": "#E8A317",
+      "initials": "PB",
+      "r1_pct": 11.34,
+      "r1_voix": 92448,
+      "eliminated": true,
+      "elimination_reason": "Retrait (soutien Dati)"
+    },
+    {
+      "id": "knafo",
+      "name": "Sarah Knafo",
+      "party": "Reconquête !",
+      "color": "#1B1464",
+      "initials": "SK",
+      "r1_pct": 10.4,
+      "r1_voix": 84809,
+      "eliminated": true,
+      "elimination_reason": "Retrait"
+    },
+    {
+      "id": "chikirou",
+      "name": "Sophia Chikirou",
+      "party": "La France Insoumise",
+      "color": "#CC2443",
+      "initials": "SC",
+      "r1_pct": 11.72,
+      "r1_voix": 95551,
+      "r2_pct": 7.96,
+      "r2_voix": 67464,
+      "eliminated": false
+    },
+    {
+      "id": "mariani",
+      "name": "Thierry Mariani",
+      "party": "Rassemblement National",
+      "color": "#0D378A",
+      "initials": "TM",
+      "r1_pct": 1.61,
+      "r1_voix": 13096,
+      "eliminated": true,
+      "elimination_reason": "<10%"
+    }
+  ],
+  "results": {
+    "r1": {
+      "title": "📊 Résultats officiels du 1er tour — 15 mars 2026",
+      "display_order": [
+        "gregoire",
+        "dati",
+        "chikirou",
+        "bournazel",
+        "knafo",
+        "mariani"
+      ],
+      "participation_pct": 58.89,
+      "votants": 815296,
+      "source": {
+        "url": "https://www.paris.fr/pages/elections-municipales-2026-la-proclamation-officielle-des-resultats-definitifs-en-video-34241",
+        "name": "Ville de Paris — résultats officiels",
+        "accessed_date": "2026-03-24"
+      }
+    },
+    "r2": {
+      "title": "📊 Résultats officiels du 2nd tour — 22 mars 2026",
+      "display_order": [
+        "gregoire",
+        "dati",
+        "chikirou"
+      ],
+      "winner": "gregoire",
+      "participation_pct": 61.6,
+      "suffrages_exprimes": 847432,
+      "conseil_de_paris": {
+        "gregoire": 103,
+        "dati": 51,
+        "chikirou": 9,
+        "total": 163
+      },
+      "source": {
+        "url": "https://www.paris.fr/pages/elections-municipales-2026-la-proclamation-officielle-des-resultats-definitifs-en-video-34241",
+        "name": "Ville de Paris — proclamation officielle",
+        "accessed_date": "2026-03-24"
+      }
+    }
+  },
+  "eliminations": {
+    "intro": "<strong>2nd tour — 22 mars 2026</strong> : seules les listes ayant obtenu ≥10% des suffrages au 1er tour peuvent se maintenir.",
+    "entries": [
+      {
+        "id": "mariani",
+        "emoji": "🔴",
+        "reason": "<strong>éliminé</strong> (1,61% &lt; 10%)",
+        "tag": "Éliminé",
+        "tag_class": "eliminated"
+      },
+      {
+        "id": "knafo",
+        "emoji": "🟤",
+        "reason": "<strong>retrait volontaire</strong> malgré 10,40%",
+        "tag": "Retrait",
+        "tag_class": "withdrawn"
+      },
+      {
+        "id": "bournazel",
+        "emoji": "🟠",
+        "reason": "<strong>retrait au profit de Rachida Dati</strong> (11,34%)",
+        "tag": "Retrait",
+        "tag_class": "withdrawn"
+      }
+    ],
+    "conclusion": "→ <strong>Triangulaire</strong> : Grégoire, Dati, Chikirou."
+  },
+  "eliminated_ids": [
+    "knafo",
+    "mariani",
+    "bournazel"
+  ],
+  "topics": [
+    {
+      "id": "securite",
+      "name": "Sécurité",
+      "icon": "🛡️",
+      "stats": [
+        {
+          "value": "51%",
+          "label": "des Parisiens s'en préoccupent (25% la placent en n°1)",
+          "source": {
+            "url": "https://www.ipsos.com/fr-fr/municipales-2026-paris-emmanuel-gregoire-en-tete-des-intentions-de-vote-devant-rachida-dati",
+            "name": "Ipsos Mars 2026",
+            "accessed_date": "2026-03-24"
+          },
+          "verified_date": "2026-03-24"
+        },
+        {
+          "value": "~500",
+          "label": "policiers municipaux actuellement",
+          "source": {
+            "url": "https://www.lakoom.fr/municipales-a-paris-securite-logement-petite-enfance/",
+            "name": "Lakoom",
+            "accessed_date": "2026-03-24"
+          },
+          "verified_date": "2026-03-24"
+        },
+        {
+          "value": "+6%",
+          "label": "usage stupéfiants 2025",
+          "source": {
+            "url": "https://www.insee.fr/fr/statistiques/2134423",
+            "name": "SSMSI",
+            "accessed_date": "2026-03-24"
+          },
+          "verified_date": "2026-03-24"
+        },
+        {
+          "value": "+8%",
+          "label": "trafic stupéfiants 2025",
+          "source": {
+            "url": "https://www.insee.fr/fr/statistiques/2134423",
+            "name": "SSMSI",
+            "accessed_date": "2026-03-24"
+          },
+          "verified_date": "2026-03-24"
+        }
+      ],
+      "candidate_tags": {
+        "gregoire": {
+          "text": "✅ Compétence municipale",
+          "class": "tag-ok"
+        },
+        "dati": {
+          "text": "⚠️ Coût non budgété",
+          "class": "tag-warn"
+        },
+        "bournazel": {
+          "text": "⚠️ Coût non budgété",
+          "class": "tag-warn"
+        },
+        "knafo": {
+          "text": "⚠️ Hors compétence municipale",
+          "class": "tag-warn"
+        },
+        "chikirou": {
+          "text": "✅ Compétence municipale",
+          "class": "tag-ok"
+        },
+        "mariani": {
+          "text": "⚠️ Faisabilité juridique incertaine",
+          "class": "tag-warn"
+        }
+      },
+      "dimensions": [
+        {
+          "label": "👮 Effectifs police municipale",
+          "positions": {
+            "gregoire": {
+              "text": "<strong>+1 000</strong> agents (doublement en 6 ans)",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "dati": {
+              "text": "<strong>5 000</strong> policiers municipaux (×10 des effectifs actuels)",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "bournazel": {
+              "text": "<strong>6 000</strong> policiers en <strong>6 ans</strong>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "knafo": {
+              "text": "<strong>8 000</strong> policiers armés + <strong>500</strong> agents dans les transports",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "chikirou": {
+              "text": "Police de proximité non armée, médiateurs de quartier",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "mariani": {
+              "text": "7 brigades spécialisées (anti-squat, anti-drogue, transports, BAR…)",
+              "verified_date": "2026-03-24",
+              "sources": []
+            }
+          }
+        },
+        {
+          "label": "🔫 Armement",
+          "positions": {
+            "gregoire": {
+              "text": "<strong>Non</strong> — police non armée, comité d'éthique indépendant",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "dati": {
+              "text": "<strong>Partiel</strong> — armement de certaines unités",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "bournazel": {
+              "text": "<strong>Oui</strong> — brigades spécialisées armées",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "knafo": {
+              "text": "<strong>Oui</strong> — armement systématique des 8 000 agents",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "chikirou": {
+              "text": "<strong>Non</strong> — refus de l'armement, approche préventive",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "mariani": {
+              "text": "<strong>Oui</strong> — armement généralisé, tolérance zéro",
+              "verified_date": "2026-03-24",
+              "sources": []
+            }
+          }
+        },
+        {
+          "label": "📹 Vidéosurveillance / Caméras",
+          "positions": {
+            "gregoire": {
+              "text": "<strong>500</strong> caméras mobiles tactiques",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "dati": {
+              "text": "Coopération renforcée avec la Préfecture de Police (caméras existantes)",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "bournazel": {
+              "text": "<strong>300</strong> capteurs acoustiques « Méduses » + <strong>50</strong> radars anti-bruit",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "knafo": {
+              "text": "IA vidéosurveillance algorithmique généralisée",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "chikirou": {
+              "text": "<strong>Refus</strong> des caméras de surveillance",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "mariani": {
+              "text": "<strong>15 000</strong> caméras — surveillance massive",
+              "verified_date": "2026-03-24",
+              "sources": []
+            }
+          }
+        },
+        {
+          "label": "🌐 Lien insécurité–immigration",
+          "positions": {
+            "gregoire": {
+              "text": "<strong>Non</strong> — insécurité liée aux défaillances de l'État",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "dati": {
+              "text": "Non abordé directement",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "bournazel": {
+              "text": "Non abordé — focus technologique",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "knafo": {
+              "text": "<strong>Oui</strong> — fermeture des 99 centres de migrants, expulsion des délinquants étrangers",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "chikirou": {
+              "text": "<strong>Non</strong> — insécurité = symptôme des inégalités sociales",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "mariani": {
+              "text": "<strong>Oui</strong> — insécurité = conséquence de l'immigration et du laxisme judiciaire",
+              "verified_date": "2026-03-24",
+              "sources": []
+            }
+          }
+        },
+        {
+          "label": "⚖️ Approche générale",
+          "positions": {
+            "gregoire": {
+              "text": "<strong>Préventive</strong> — kiosques de sécurité, brigades nocturnes à vélo, récépissé de contrôle",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "dati": {
+              "text": "<strong>Mixte</strong> — présence dissuasive massive, coopération",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "bournazel": {
+              "text": "<strong>Techno-sécuritaire</strong> — innovation + brigades spécialisées",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "knafo": {
+              "text": "<strong>Répressive</strong> — tolérance zéro, présence maximale",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "chikirou": {
+              "text": "<strong>Préventive</strong> — prévention sociale, médiation de quartier",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "mariani": {
+              "text": "<strong>Répressive</strong> — tolérance zéro, 7 brigades spécialisées",
+              "verified_date": "2026-03-24",
+              "sources": []
+            }
+          }
+        }
+      ],
+      "analysis": {
+        "gregoire": {
+          "text": "Recrutement de <strong>1 000</strong> agents réaliste sur 6 ans (~170/an). La ville recrute ~200 agents/an tous services confondus (DRH 2024).",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "dati": {
+          "text": "800-1 000 recrutements/an pendant 6 ans : capacité actuelle ~200/an. Coût estimé <strong>250-300 M€/an</strong> non budgété. Nice = ~600 policiers municipaux.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "bournazel": {
+          "text": "Même défi RH que Dati. Capteurs « Méduses » testés à Saint-Étienne/Orléans avec résultats mitigés (rapport CNIL 2024).",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "knafo": {
+          "text": "<strong>8 000</strong> policiers = coût ≥<strong>150 M€/an</strong>. Fermeture des centres de migrants et expulsions = compétence de l'État, pas du maire.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "chikirou": {
+          "text": "Approches préventives : résultats à long terme (études INHESJ) mais peu d'impact court terme sur le sentiment d'insécurité (<strong>51%</strong> s'en préoccupent).",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "mariani": {
+          "text": "<strong>35%</strong> des mesures relèvent de compétences étatiques et <strong>30%</strong> sont jugées illégales ou anticonstitutionnelles (Labo Paris).",
+          "verified_date": "2026-03-24",
+          "sources": []
+        }
+      },
+      "sources_per_candidate": {
+        "gregoire": [
+          {
+            "url": "https://emmanuel-gregoire-2026.fr/programme/",
+            "name": "Programme E. Grégoire"
+          },
+          {
+            "url": "https://www.lakoom.fr/municipales-a-paris-securite-logement-petite-enfance/",
+            "name": "Lakoom"
+          }
+        ],
+        "dati": [
+          {
+            "url": "https://www.lakoom.fr/municipales-a-paris-securite-logement-petite-enfance/",
+            "name": "Lakoom"
+          },
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ],
+        "bournazel": [
+          {
+            "url": "https://bournazel.paris/",
+            "name": "Programme P-Y. Bournazel"
+          },
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ],
+        "knafo": [
+          {
+            "url": "https://www.sarahpourparis.fr/unevilleheureuse",
+            "name": "Programme S. Knafo"
+          },
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ],
+        "chikirou": [
+          {
+            "url": "https://www.lakoom.fr/municipales-a-paris-securite-logement-petite-enfance/",
+            "name": "Lakoom"
+          },
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ],
+        "mariani": [
+          {
+            "url": "https://www.mariani-2026.fr/Le-programme",
+            "name": "Programme T. Mariani"
+          },
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ]
+      }
+    },
+    {
+      "id": "logement",
+      "name": "Logement",
+      "icon": "🏠",
+      "stats": [
+        {
+          "value": "~10 000€/m²",
+          "label": "prix moyen à Paris (2025)",
+          "source": {
+            "url": "https://www.ipsos.com/fr-fr/municipales-2026-paris-emmanuel-gregoire-en-tete-des-intentions-de-vote-devant-rachida-dati",
+            "name": "Ipsos",
+            "accessed_date": "2026-03-24"
+          },
+          "verified_date": "2026-03-24"
+        },
+        {
+          "value": "-200 000",
+          "label": "habitants en 15 ans",
+          "source": {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "INSEE",
+            "accessed_date": "2026-03-24"
+          },
+          "verified_date": "2026-03-24"
+        },
+        {
+          "value": "23%",
+          "label": "de logements sociaux",
+          "source": {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Ville de Paris",
+            "accessed_date": "2026-03-24"
+          },
+          "verified_date": "2026-03-24"
+        },
+        {
+          "value": "72%",
+          "label": "favorables aux restrictions Airbnb",
+          "source": {
+            "url": "https://www.ipsos.com/fr-fr/municipales-2026-paris-emmanuel-gregoire-en-tete-des-intentions-de-vote-devant-rachida-dati",
+            "name": "Ipsos",
+            "accessed_date": "2026-03-24"
+          },
+          "verified_date": "2026-03-24"
+        }
+      ],
+      "candidate_tags": {
+        "gregoire": {
+          "text": "✅ Compétence municipale",
+          "class": "tag-ok"
+        },
+        "dati": {
+          "text": "⚠️ Coût non budgété",
+          "class": "tag-warn"
+        },
+        "bournazel": {
+          "text": "✅ Compétence municipale (partiellement)",
+          "class": "tag-ok"
+        },
+        "knafo": {
+          "text": "⚠️ Faisabilité juridique incertaine",
+          "class": "tag-warn"
+        },
+        "chikirou": {
+          "text": "⚠️ Nécessite accord État/Région",
+          "class": "tag-warn"
+        },
+        "mariani": {
+          "text": "⚠️ Faisabilité juridique incertaine",
+          "class": "tag-warn"
+        }
+      },
+      "dimensions": [
+        {
+          "label": "🏗️ Construction / offre",
+          "positions": {
+            "gregoire": {
+              "text": "<strong>60 000</strong> logements (30k sociaux + 30k abordables), taxation de la vacance, réquisition",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "dati": {
+              "text": "<strong>10 000</strong> rénovations thermiques/an, logement prioritaire travailleurs essentiels",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "bournazel": {
+              "text": "Remettre <strong>20 000</strong> logements vides sur le marché, pack garanties (<strong>200 €/an</strong> assurance proprio)",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "knafo": {
+              "text": "Suppression de l'encadrement des loyers pour relancer l'investissement privé",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "chikirou": {
+              "text": "<strong>100 000</strong> logements sociaux en <strong>10 ans</strong>, gel des loyers sociaux, objectif zéro sans-abri",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "mariani": {
+              "text": "Moratoire sur la construction, vente de <strong>40 000</strong> HLM",
+              "verified_date": "2026-03-24",
+              "sources": []
+            }
+          }
+        },
+        {
+          "label": "📊 Encadrement des loyers",
+          "positions": {
+            "gregoire": {
+              "text": "<strong>Maintien</strong> et renforcement, arsenal anti-spéculation",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "dati": {
+              "text": "<strong>Assouplissement</strong> de l'encadrement",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "bournazel": {
+              "text": "Non abordé directement",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "knafo": {
+              "text": "<strong>Suppression</strong> — frein au marché selon elle",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "chikirou": {
+              "text": "<strong>Renforcement</strong> + gel des loyers sociaux",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "mariani": {
+              "text": "Non abordé directement",
+              "verified_date": "2026-03-24",
+              "sources": []
+            }
+          }
+        },
+        {
+          "label": "🏖️ Airbnb / meublés touristiques",
+          "positions": {
+            "gregoire": {
+              "text": "Limité à <strong>90 j/an</strong>, brigade de protection du logement",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "dati": {
+              "text": "<em class=\"muted\">Non abordé</em>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "bournazel": {
+              "text": "<em class=\"muted\">Non abordé</em>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "knafo": {
+              "text": "<em class=\"muted\">Non abordé</em>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "chikirou": {
+              "text": "Régulation forte des meublés touristiques",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "mariani": {
+              "text": "<em class=\"muted\">Non abordé</em>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            }
+          }
+        },
+        {
+          "label": "🏛️ Préemptions",
+          "positions": {
+            "gregoire": {
+              "text": "<strong>Maintien</strong> et renforcement de la préemption municipale",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "dati": {
+              "text": "<strong>Fin</strong> des préemptions (<strong>250 M€</strong> d'économies estimées)",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "bournazel": {
+              "text": "<em class=\"muted\">Non abordé</em>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "knafo": {
+              "text": "<em class=\"muted\">Non abordé</em>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "chikirou": {
+              "text": "<strong>Renforcement</strong> des préemptions pour créer du logement social",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "mariani": {
+              "text": "<em class=\"muted\">Non abordé</em>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            }
+          }
+        },
+        {
+          "label": "🏘️ Logement social",
+          "positions": {
+            "gregoire": {
+              "text": "+<strong>30 000</strong> logements sociaux, garantie municipale des loyers",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "dati": {
+              "text": "Pas d'augmentation, fin des préemptions réduisant la capacité",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "bournazel": {
+              "text": "<strong>Vente</strong> de <strong>20 000</strong> logements sociaux pour financer la rénovation (<strong>3 Mds€</strong>)",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "knafo": {
+              "text": "Fin des attributions aux non-résidents",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "chikirou": {
+              "text": "+<strong>100 000</strong> logements sociaux, brigade du droit au logement (<strong>150</strong> agents)",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "mariani": {
+              "text": "<strong>Vente</strong> de <strong>40 000</strong> HLM, priorité nationale d'attribution",
+              "verified_date": "2026-03-24",
+              "sources": []
+            }
+          }
+        }
+      ],
+      "analysis": {
+        "gregoire": {
+          "text": "<strong>60 000</strong> logements inclut réhabilitation. Rythme actuel : ~<strong>7 000</strong> logements sociaux financés/an (APUR 2024).",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "dati": {
+          "text": "<strong>10 000</strong> rénovations/an = <strong>300-500 M€/an</strong> non financé. Contradiction : <strong>2,7%</strong> de logement social dans le 7e qu'elle dirige.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "bournazel": {
+          "text": "Valorisation HLM à 150k€/unité = très optimiste (prix moyen ~80-100k€ selon USH). Risque sur la mixité sociale.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "knafo": {
+          "text": "Suppression de l'encadrement juridiquement contestable (loi ELAN, compétence nationale). L'encadrement a réduit les loyers de <strong>~3%</strong> (OLAP).",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "chikirou": {
+          "text": "Doubler le rythme de construction nécessiterait des milliards. Brigade logement rentable : coût <strong>15 M€/an</strong>, recettes amendes <strong>30-50 M€/an</strong>.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "mariani": {
+          "text": "Priorité nationale = anticonstitutionnelle. Vente <strong>40 000</strong> HLM = <strong>-17%</strong> du parc social. Contradiction interne flagrante.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        }
+      },
+      "sources_per_candidate": {
+        "gregoire": [
+          {
+            "url": "https://emmanuel-gregoire-2026.fr/programme/",
+            "name": "Programme E. Grégoire"
+          },
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ],
+        "dati": [
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ],
+        "bournazel": [
+          {
+            "url": "https://bournazel.paris/",
+            "name": "Programme P-Y. Bournazel"
+          },
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ],
+        "knafo": [
+          {
+            "url": "https://www.sarahpourparis.fr/unevilleheureuse",
+            "name": "Programme S. Knafo"
+          },
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ],
+        "chikirou": [
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ],
+        "mariani": [
+          {
+            "url": "https://www.mariani-2026.fr/Le-programme",
+            "name": "Programme T. Mariani"
+          },
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ]
+      }
+    },
+    {
+      "id": "proprete",
+      "name": "Propreté",
+      "icon": "🧹",
+      "stats": [
+        {
+          "value": "84%",
+          "label": "jugent Paris sale",
+          "source": {
+            "url": "https://www.ipsos.com/fr-fr/municipales-2026-paris-emmanuel-gregoire-en-tete-des-intentions-de-vote-devant-rachida-dati",
+            "name": "Ipsos",
+            "accessed_date": "2026-03-24"
+          },
+          "verified_date": "2026-03-24"
+        },
+        {
+          "value": "800M€",
+          "label": "budget propreté annuel",
+          "source": {
+            "url": "https://www.lakoom.fr/municipales-a-paris-securite-logement-petite-enfance/",
+            "name": "Lakoom",
+            "accessed_date": "2026-03-24"
+          },
+          "verified_date": "2026-03-24"
+        },
+        {
+          "value": "44%",
+          "label": "en font une priorité",
+          "source": {
+            "url": "https://www.ipsos.com/fr-fr/municipales-2026-paris-emmanuel-gregoire-en-tete-des-intentions-de-vote-devant-rachida-dati",
+            "name": "Ipsos",
+            "accessed_date": "2026-03-24"
+          },
+          "verified_date": "2026-03-24"
+        },
+        {
+          "value": "46%",
+          "label": "favorables à la privatisation",
+          "source": {
+            "url": "https://www.ipsos.com/fr-fr/municipales-2026-paris-emmanuel-gregoire-en-tete-des-intentions-de-vote-devant-rachida-dati",
+            "name": "Ipsos",
+            "accessed_date": "2026-03-24"
+          },
+          "verified_date": "2026-03-24"
+        }
+      ],
+      "candidate_tags": {
+        "gregoire": {
+          "text": "✅ Compétence municipale",
+          "class": "tag-ok"
+        },
+        "dati": {
+          "text": "✅ Compétence municipale",
+          "class": "tag-ok"
+        },
+        "bournazel": {
+          "text": "⚠️ Nécessite accord État/Région",
+          "class": "tag-warn"
+        },
+        "knafo": {
+          "text": "✅ Compétence municipale",
+          "class": "tag-ok"
+        },
+        "chikirou": {
+          "text": "⚠️ Coût non budgété",
+          "class": "tag-warn"
+        },
+        "mariani": {
+          "text": "✅ Compétence municipale",
+          "class": "tag-ok"
+        }
+      },
+      "dimensions": [
+        {
+          "label": "🏭 Gestion (public / privé / mixte)",
+          "positions": {
+            "gregoire": {
+              "text": "<strong>Public</strong> — refus de la privatisation, optimisation interne",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "dati": {
+              "text": "<strong>Mixte</strong> — externalisation partielle de la collecte",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "bournazel": {
+              "text": "<strong>Privé</strong> — privatisation totale, rémunération à la performance",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "knafo": {
+              "text": "<strong>Privé</strong> — privatisation + optimisation IA des itinéraires",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "chikirou": {
+              "text": "<strong>Public renforcé</strong> — remunicipalisation totale, égalité entre arrondissements",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "mariani": {
+              "text": "<strong>Privé</strong> — externalisation totale, mise en concurrence",
+              "verified_date": "2026-03-24",
+              "sources": []
+            }
+          }
+        },
+        {
+          "label": "💶 Sanctions / amendes",
+          "positions": {
+            "gregoire": {
+              "text": "Amendes renforcées : <strong>500 €</strong> particuliers, <strong>1 000 €</strong> professionnels, brigades anti-incivilités",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "dati": {
+              "text": "Brigades d'intervention rapide, réunions trimestrielles riverains",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "bournazel": {
+              "text": "Constats d'huissier, numéro vert pour signalements citoyens",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "knafo": {
+              "text": "Verbalisations massives par IA + agents assermentés",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "chikirou": {
+              "text": "Augmentation des effectifs d'éboueurs, zéro déchet, composteurs de proximité",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "mariani": {
+              "text": "Site dédié aux signalements, propreté 24h/24",
+              "verified_date": "2026-03-24",
+              "sources": []
+            }
+          }
+        },
+        {
+          "label": "🤖 Innovation technologique",
+          "positions": {
+            "gregoire": {
+              "text": "<em class=\"muted\">Non abordé — approche humaine</em>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "dati": {
+              "text": "Modernisation du matériel existant",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "bournazel": {
+              "text": "Opérations « coup de poing » ciblées",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "knafo": {
+              "text": "<strong>IA</strong> pour optimiser les itinéraires de collecte + capteurs de remplissage des poubelles",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "chikirou": {
+              "text": "Ateliers de réparation, composteurs de proximité",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "mariani": {
+              "text": "<em class=\"muted\">Non abordé</em>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            }
+          }
+        }
+      ],
+      "analysis": {
+        "gregoire": {
+          "text": "Paris consacre déjà <strong>~800 M€/an</strong> à la propreté — un des budgets les plus élevés d'Europe par habitant.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "dati": {
+          "text": "L'externalisation partielle existe déjà. Résultats variables selon cahiers des charges (Cour des Comptes régionale 2023).",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "bournazel": {
+          "text": "Privatisation totale = transfert de <strong>~5 000</strong> agents municipaux (clause de reprise du personnel). Expérience Londres : +<strong>15%</strong> de coûts initiaux.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "knafo": {
+          "text": "Optimisation IA déployée à Barcelone/Séoul : gains de <strong>15-20%</strong> d'efficacité (McKinsey 2024). Approche réaliste et innovante.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "chikirou": {
+          "text": "Remunicipalisation = contentieux juridiques et coûts de transition élevés. Zéro déchet = horizon <strong>15-20 ans</strong> (ADEME).",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "mariani": {
+          "text": "Propreté 24h/24 = +<strong>30%</strong> de masse salariale (travail de nuit). Proposition similaire à Bournazel et Knafo sur le fond.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        }
+      },
+      "sources_per_candidate": {
+        "gregoire": [
+          {
+            "url": "https://emmanuel-gregoire-2026.fr/programme/",
+            "name": "Programme E. Grégoire"
+          },
+          {
+            "url": "https://www.lakoom.fr/municipales-a-paris-securite-logement-petite-enfance/",
+            "name": "Lakoom"
+          }
+        ],
+        "dati": [
+          {
+            "url": "https://www.lakoom.fr/municipales-a-paris-securite-logement-petite-enfance/",
+            "name": "Lakoom"
+          }
+        ],
+        "bournazel": [
+          {
+            "url": "https://www.lakoom.fr/municipales-a-paris-securite-logement-petite-enfance/",
+            "name": "Lakoom"
+          },
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ],
+        "knafo": [
+          {
+            "url": "https://www.lakoom.fr/municipales-a-paris-securite-logement-petite-enfance/",
+            "name": "Lakoom"
+          },
+          {
+            "url": "https://www.sarahpourparis.fr/unevilleheureuse",
+            "name": "Programme S. Knafo"
+          }
+        ],
+        "chikirou": [
+          {
+            "url": "https://www.lakoom.fr/municipales-a-paris-securite-logement-petite-enfance/",
+            "name": "Lakoom"
+          },
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ],
+        "mariani": [
+          {
+            "url": "https://www.lakoom.fr/municipales-a-paris-securite-logement-petite-enfance/",
+            "name": "Lakoom"
+          },
+          {
+            "url": "https://www.mariani-2026.fr/Le-programme",
+            "name": "Programme T. Mariani"
+          }
+        ]
+      }
+    },
+    {
+      "id": "transport",
+      "name": "Transport & Mobilité",
+      "icon": "🚇",
+      "stats": [
+        {
+          "value": "61%",
+          "label": "favorables au retour 70 km/h périphérique",
+          "source": {
+            "url": "https://www.ipsos.com/fr-fr/municipales-2026-paris-emmanuel-gregoire-en-tete-des-intentions-de-vote-devant-rachida-dati",
+            "name": "Ipsos",
+            "accessed_date": "2026-03-24"
+          },
+          "verified_date": "2026-03-24"
+        },
+        {
+          "value": "55%",
+          "label": "favorables à de nouvelles pistes cyclables",
+          "source": {
+            "url": "https://www.ipsos.com/fr-fr/municipales-2026-paris-emmanuel-gregoire-en-tete-des-intentions-de-vote-devant-rachida-dati",
+            "name": "Ipsos",
+            "accessed_date": "2026-03-24"
+          },
+          "verified_date": "2026-03-24"
+        },
+        {
+          "value": "69%",
+          "label": "des -35 ans pro-pistes cyclables",
+          "source": {
+            "url": "https://www.ipsos.com/fr-fr/municipales-2026-paris-emmanuel-gregoire-en-tete-des-intentions-de-vote-devant-rachida-dati",
+            "name": "Ipsos",
+            "accessed_date": "2026-03-24"
+          },
+          "verified_date": "2026-03-24"
+        }
+      ],
+      "candidate_tags": {
+        "gregoire": {
+          "text": "⚠️ Nécessite accord État/Région",
+          "class": "tag-warn"
+        },
+        "dati": {
+          "text": "✅ Compétence municipale",
+          "class": "tag-ok"
+        },
+        "bournazel": {
+          "text": "⚠️ Nécessite accord État/Région",
+          "class": "tag-warn"
+        },
+        "knafo": {
+          "text": "⚠️ Coût non budgété",
+          "class": "tag-warn"
+        },
+        "chikirou": {
+          "text": "⚠️ Nécessite accord État/Région",
+          "class": "tag-warn"
+        },
+        "mariani": {
+          "text": "⚠️ Coût non budgété",
+          "class": "tag-warn"
+        }
+      },
+      "dimensions": [
+        {
+          "label": "🛣️ Périphérique (vitesse)",
+          "positions": {
+            "gregoire": {
+              "text": "Maintien <strong>50 km/h</strong>, transformation en boulevard urbain (<strong>5-8 Mds€</strong>, pluri-mandatures)",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "dati": {
+              "text": "Retour à <strong>70 km/h</strong>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "bournazel": {
+              "text": "<em class=\"muted\">Non abordé directement</em>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "knafo": {
+              "text": "Retour à <strong>70 km/h</strong>, couverture des voies sur berge",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "chikirou": {
+              "text": "Piétonisation massive du centre, pas de position explicite sur le périph",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "mariani": {
+              "text": "Retour à <strong>70-90 km/h</strong>, révision du plan de circulation",
+              "verified_date": "2026-03-24",
+              "sources": []
+            }
+          }
+        },
+        {
+          "label": "🚲 Vélo / mobilités douces",
+          "positions": {
+            "gregoire": {
+              "text": "Nouvelles pistes cyclables, <strong>1 000</strong> rues piétonnes",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "dati": {
+              "text": "Signaux pro-voiture, pas d'extension vélo",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "bournazel": {
+              "text": "<em class=\"muted\">Non abordé</em>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "knafo": {
+              "text": "Le tout-vélo pénalise les motorisés, fluidification du trafic automobile",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "chikirou": {
+              "text": "<strong>Vélo prioritaire</strong>, piétonisation massive du centre",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "mariani": {
+              "text": "Révision du plan de circulation, réduction des pistes cyclables",
+              "verified_date": "2026-03-24",
+              "sources": []
+            }
+          }
+        },
+        {
+          "label": "🚇 Transports en commun",
+          "positions": {
+            "gregoire": {
+              "text": "<strong>Métro 24h/24</strong>, 15 lignes de bus express",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "dati": {
+              "text": "<em class=\"muted\">Non abordé</em>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "bournazel": {
+              "text": "<strong>Métro de nuit</strong> (comme Londres/New York)",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "knafo": {
+              "text": "<strong>IA</strong> pour optimisation des feux tricolores",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "chikirou": {
+              "text": "<strong>Transport gratuit</strong> pour tous",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "mariani": {
+              "text": "Faciliter les livraisons",
+              "verified_date": "2026-03-24",
+              "sources": []
+            }
+          }
+        },
+        {
+          "label": "🚗 Stationnement / voiture",
+          "positions": {
+            "gregoire": {
+              "text": "Réduction de la place de la voiture, ville apaisée",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "dati": {
+              "text": "Pro-voiture, fluidification du trafic",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "bournazel": {
+              "text": "Vente du Parc des Princes pour financer du stationnement souterrain gratuit",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "knafo": {
+              "text": "Fluidification du trafic, récupération de l'espace automobile",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "chikirou": {
+              "text": "Ville sans voiture au centre",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "mariani": {
+              "text": "<strong>20 000</strong> nouvelles places de parking souterrain",
+              "verified_date": "2026-03-24",
+              "sources": []
+            }
+          }
+        }
+      ],
+      "analysis": {
+        "gregoire": {
+          "text": "Transformation du périph = chantier colossal multi-institutionnel. Métro 24h/24 relève d'IDFM, pas de la Ville.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "dati": {
+          "text": "Retour à 70 km/h populaire (<strong>61%</strong> favorables) mais contradictoire avec la pollution. Passage à 50 km/h : <strong>-25%</strong> accidents, <strong>-2 dB</strong> (Bruitparif 2024).",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "bournazel": {
+          "text": "Métro de nuit = accord IDFM/RATP nécessaire. Night Tube Londres = vendredis/samedis uniquement. Vente Parc des Princes = risque juridique.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "knafo": {
+          "text": "IA feux tricolores réaliste (Pittsburgh : <strong>-25%</strong> temps d'attente). Couverture voies sur berge = 10+ ans, milliards €, contraintes UNESCO. Jugé irréaliste.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "chikirou": {
+          "text": "Gratuité transports = <strong>~4 Mds€/an</strong> (recettes IDFM). Dunkerque (gratuit depuis 2018) : <strong>+85%</strong> fréquentation mais réseau beaucoup plus petit.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "mariani": {
+          "text": "Contradictoire avec 50 000 arbres. <strong>20 000</strong> places parking = <strong>~2 Mds€</strong> en souterrain. Tendance européenne = réduction espace automobile.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        }
+      },
+      "sources_per_candidate": {
+        "gregoire": [
+          {
+            "url": "https://emmanuel-gregoire-2026.fr/programme/",
+            "name": "Programme E. Grégoire"
+          },
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ],
+        "dati": [
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          },
+          {
+            "url": "https://www.lakoom.fr/municipales-a-paris-securite-logement-petite-enfance/",
+            "name": "Lakoom"
+          }
+        ],
+        "bournazel": [
+          {
+            "url": "https://bournazel.paris/",
+            "name": "Programme P-Y. Bournazel"
+          },
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ],
+        "knafo": [
+          {
+            "url": "https://www.sarahpourparis.fr/unevilleheureuse",
+            "name": "Programme S. Knafo"
+          },
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ],
+        "chikirou": [
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ],
+        "mariani": [
+          {
+            "url": "https://www.mariani-2026.fr/Le-programme",
+            "name": "Programme T. Mariani"
+          },
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ecologie",
+      "name": "Environnement & Écologie",
+      "icon": "🌿",
+      "stats": [
+        {
+          "value": "34%",
+          "label": "en font une priorité",
+          "source": {
+            "url": "https://www.ipsos.com/fr-fr/municipales-2026-paris-emmanuel-gregoire-en-tete-des-intentions-de-vote-devant-rachida-dati",
+            "name": "Ipsos",
+            "accessed_date": "2026-03-24"
+          },
+          "verified_date": "2026-03-24"
+        },
+        {
+          "value": "62%",
+          "label": "priorité électorat Grégoire",
+          "source": {
+            "url": "https://www.ipsos.com/fr-fr/municipales-2026-paris-emmanuel-gregoire-en-tete-des-intentions-de-vote-devant-rachida-dati",
+            "name": "Ipsos",
+            "accessed_date": "2026-03-24"
+          },
+          "verified_date": "2026-03-24"
+        },
+        {
+          "value": "~10%",
+          "label": "priorité électorat Knafo/Mariani",
+          "source": {
+            "url": "https://www.ipsos.com/fr-fr/municipales-2026-paris-emmanuel-gregoire-en-tete-des-intentions-de-vote-devant-rachida-dati",
+            "name": "Ipsos",
+            "accessed_date": "2026-03-24"
+          },
+          "verified_date": "2026-03-24"
+        }
+      ],
+      "candidate_tags": {
+        "gregoire": {
+          "text": "✅ Compétence municipale",
+          "class": "tag-ok"
+        },
+        "dati": {
+          "text": "✅ Compétence municipale",
+          "class": "tag-ok"
+        },
+        "bournazel": {
+          "text": "✅ Compétence municipale",
+          "class": "tag-ok"
+        },
+        "knafo": {
+          "text": "⚠️ Quasi-absent du programme",
+          "class": "tag-warn"
+        },
+        "chikirou": {
+          "text": "✅ Compétence municipale",
+          "class": "tag-ok"
+        },
+        "mariani": {
+          "text": "⚠️ Coût non budgété",
+          "class": "tag-warn"
+        }
+      },
+      "dimensions": [
+        {
+          "label": "🌳 Espaces verts / végétalisation",
+          "positions": {
+            "gregoire": {
+              "text": "<strong>300 hectares</strong> de jardins ouverts (via PLU bioclimatique)",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "dati": {
+              "text": "Préservation de <strong>500 000</strong> arbres, 500 bandes végétalisées, débitumisation",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "bournazel": {
+              "text": "<em class=\"muted\">Non abordé — focus rénovation thermique</em>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "knafo": {
+              "text": "Maquette numérique pour simuler les impacts — quasi-absent au-delà",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "chikirou": {
+              "text": "<strong>300 hectares</strong> d'espaces verts, plan de justice climatique",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "mariani": {
+              "text": "Ceinture verte (couverture partielle du périph), <strong>50 000</strong> arbres",
+              "verified_date": "2026-03-24",
+              "sources": []
+            }
+          }
+        },
+        {
+          "label": "🏠 Rénovation thermique",
+          "positions": {
+            "gregoire": {
+              "text": "Plan climat ambitieux, transformation urbaine couplée à la justice sociale",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "dati": {
+              "text": "Plan « Grand Chaud » dès l'an 1 pour publics fragiles via réseau Fraîcheur de Paris",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "bournazel": {
+              "text": "<strong>Rénovation thermique massive</strong> des bâtiments — levier n°1 de réduction des émissions",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "knafo": {
+              "text": "<em class=\"muted\">Non abordé</em>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "chikirou": {
+              "text": "Remunicipalisation des services énergétiques",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "mariani": {
+              "text": "<em class=\"muted\">Non abordé</em>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            }
+          }
+        },
+        {
+          "label": "🗑️ Gestion des déchets",
+          "positions": {
+            "gregoire": {
+              "text": "Intégré au plan climat global",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "dati": {
+              "text": "<em class=\"muted\">Non abordé spécifiquement</em>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "bournazel": {
+              "text": "<em class=\"muted\">Non abordé</em>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "knafo": {
+              "text": "<em class=\"muted\">Non abordé</em>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "chikirou": {
+              "text": "<strong>Zéro déchet</strong>, composteurs de proximité, ateliers de réparation",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "mariani": {
+              "text": "<em class=\"muted\">Non abordé</em>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            }
+          }
+        }
+      ],
+      "analysis": {
+        "gregoire": {
+          "text": "<strong>300 ha</strong> ambitieux mais inclut ouverture de jardins privés existants via PLUb. Faisable si PLUb adopté (vote prévu 2026-2027).",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "dati": {
+          "text": "Réseau Fraîcheur de Paris = réseau de froid urbain existant (Climespace). Plan Grand Chaud réaliste et urgent. <strong>500 000</strong> arbres = conservatoire, pas nouvelles plantations.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "bournazel": {
+          "text": "Rénovation thermique = 1er levier (<strong>44%</strong> émissions = bâtiments, Bilan Carbone Paris 2023). Coût : <strong>15-20 Mds€</strong> pour tout le parc parisien.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "knafo": {
+          "text": "Grand angle mort du programme. Seule <strong>10%</strong> de son électorat en fait une priorité. Le jumeau numérique = outil de planification, pas une politique.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "chikirou": {
+          "text": "Contradiction potentielle : densification (<strong>100 000</strong> logements) vs végétalisation (<strong>300 ha</strong>). Zéro déchet = horizon <strong>15-20 ans</strong> (ADEME).",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "mariani": {
+          "text": "Contradiction flagrante : <strong>50 000</strong> arbres + retour voiture (<strong>90 km/h</strong>, <strong>20 000</strong> parkings). Couverture périph = <strong>10-15 Mds€</strong>.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        }
+      },
+      "sources_per_candidate": {
+        "gregoire": [
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ],
+        "dati": [
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ],
+        "bournazel": [
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ],
+        "knafo": [
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ],
+        "chikirou": [
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ],
+        "mariani": [
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ]
+      }
+    },
+    {
+      "id": "budget",
+      "name": "Budget & Fiscalité",
+      "icon": "💰",
+      "stats": [
+        {
+          "value": "9,3 Mds€",
+          "label": "dette de Paris (2025)",
+          "source": {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris",
+            "accessed_date": "2026-03-24"
+          },
+          "verified_date": "2026-03-24"
+        },
+        {
+          "value": "~10 Mds€",
+          "label": "budget annuel de la ville",
+          "source": {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris",
+            "accessed_date": "2026-03-24"
+          },
+          "verified_date": "2026-03-24"
+        }
+      ],
+      "candidate_tags": {
+        "gregoire": {
+          "text": "⚠️ Coût non budgété",
+          "class": "tag-warn"
+        },
+        "dati": {
+          "text": "⚠️ Coût non budgété",
+          "class": "tag-warn"
+        },
+        "bournazel": {
+          "text": "✅ Compétence municipale",
+          "class": "tag-ok"
+        },
+        "knafo": {
+          "text": "⚠️ Coût non budgété",
+          "class": "tag-warn"
+        },
+        "chikirou": {
+          "text": "⚠️ Coût non budgété",
+          "class": "tag-warn"
+        },
+        "mariani": {
+          "text": "⚠️ Coût non budgété",
+          "class": "tag-warn"
+        }
+      },
+      "dimensions": [
+        {
+          "label": "📉 Position sur la dette",
+          "positions": {
+            "gregoire": {
+              "text": "Dette (<strong>9,3 Mds€</strong>) maîtrisable, investissement public nécessaire",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "dati": {
+              "text": "Gestion catastrophique, dette doublée en <strong>6 ans</strong>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "bournazel": {
+              "text": "<strong>Diviser la dette par 2</strong> en 6 ans, rigueur budgétaire",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "knafo": {
+              "text": "Paris dépense trop — plan d'économies massif de <strong>9,4 Mds€</strong>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "chikirou": {
+              "text": "Recettes fiscales doivent augmenter, les plus riches doivent contribuer davantage",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "mariani": {
+              "text": "Paris surimposée et mal gérée, baisser impôts et dépenses",
+              "verified_date": "2026-03-24",
+              "sources": []
+            }
+          }
+        },
+        {
+          "label": "🏦 Impôts locaux",
+          "positions": {
+            "gregoire": {
+              "text": "Financement par recettes existantes + emprunt",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "dati": {
+              "text": "Économie <strong>250 M€/an</strong> (fin préemptions) mais nouvelles dépenses <strong>700 M€+</strong>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "bournazel": {
+              "text": "Discipline budgétaire stricte, pas de hausse",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "knafo": {
+              "text": "<strong>Division par 2</strong> des impôts locaux",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "chikirou": {
+              "text": "Taxes tourisme + amendes + contribution exceptionnelle",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "mariani": {
+              "text": "Baisse des impôts locaux (<strong>−310 M€/an</strong>)",
+              "verified_date": "2026-03-24",
+              "sources": []
+            }
+          }
+        },
+        {
+          "label": "🏢 Privatisations / ventes d'actifs",
+          "positions": {
+            "gregoire": {
+              "text": "<em class=\"muted\">Non abordé — pas de ventes</em>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "dati": {
+              "text": "Fin des préemptions uniquement",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "bournazel": {
+              "text": "Vente de <strong>20 000</strong> logements sociaux (estimés <strong>3 Mds€</strong>)",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "knafo": {
+              "text": "Plan d'économies détaillé, 87 propositions chiffrées",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "chikirou": {
+              "text": "Brigade logement rentable : coût <strong>15 M€</strong>, recettes <strong>30-50 M€</strong>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "mariani": {
+              "text": "Vente de <strong>40 000</strong> HLM + baisse des dépenses",
+              "verified_date": "2026-03-24",
+              "sources": []
+            }
+          }
+        },
+        {
+          "label": "📝 Chiffrage global",
+          "positions": {
+            "gregoire": {
+              "text": "Programme de <strong>234 mesures</strong>, financement insuffisamment détaillé",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "dati": {
+              "text": "Seule mesure chiffrée : fin préemptions. Reste non budgété",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "bournazel": {
+              "text": "Le plus crédible budgétairement selon analyses indépendantes",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "knafo": {
+              "text": "<strong>87 propositions</strong> chiffrées — le chiffrage le plus détaillé de tous",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "chikirou": {
+              "text": "Quelques mesures rentables identifiées, vision d'ensemble insuffisante",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "mariani": {
+              "text": "Aucun plan de financement cohérent",
+              "verified_date": "2026-03-24",
+              "sources": []
+            }
+          }
+        }
+      ],
+      "analysis": {
+        "gregoire": {
+          "text": "Ratio dette/recettes de <strong>~93%</strong> (seuil d'alerte CRC à <strong>100%</strong>). Financement global insuffisamment détaillé.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "dati": {
+          "text": "Équation impossible : économies <strong>250 M€</strong> très inférieures aux nouvelles dépenses (<strong>700 M€+</strong>/an). Aucun plan de financement global.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "bournazel": {
+          "text": "Programme le plus crédible budgétairement selon analyses indépendantes. Vente HLM = controversée socialement.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "knafo": {
+          "text": "Équation finale déficitaire : économies <strong>1,88 Md€/an</strong> − baisses d'impôts <strong>1,5 Md€</strong> − nouvelles dépenses <strong>~300 M€</strong> = déficit résiduel.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "chikirou": {
+          "text": "Brigade logement = une des rares mesures auto-financées. Le reste (<strong>100 000</strong> logements, transport gratuit) = financements non détaillés.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "mariani": {
+          "text": "Déficit créé : <strong>960 M€/an</strong>, soit <strong>5,76 Mds€</strong> sur le mandat. <strong>30%</strong> des mesures jugées illégales. Le moins crédible budgétairement.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        }
+      },
+      "sources_per_candidate": {
+        "gregoire": [
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ],
+        "dati": [
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ],
+        "bournazel": [
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ],
+        "knafo": [
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ],
+        "chikirou": [
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ],
+        "mariani": [
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ]
+      }
+    },
+    {
+      "id": "enfance",
+      "name": "Petite Enfance & Éducation",
+      "icon": "👶",
+      "stats": [
+        {
+          "value": "1,25",
+          "label": "enfant/femme (plus bas France métro)",
+          "source": {
+            "url": "https://www.sarahpourparis.fr/unevilleheureuse",
+            "name": "INSEE/Knafo",
+            "accessed_date": "2026-03-24"
+          },
+          "verified_date": "2026-03-24"
+        },
+        {
+          "value": "-24%",
+          "label": "naissances en 10 ans",
+          "source": {
+            "url": "https://www.sarahpourparis.fr/unevilleheureuse",
+            "name": "INSEE",
+            "accessed_date": "2026-03-24"
+          },
+          "verified_date": "2026-03-24"
+        },
+        {
+          "value": "7 000",
+          "label": "places en crèche vacantes",
+          "source": {
+            "url": "https://www.sarahpourparis.fr/unevilleheureuse",
+            "name": "CNAF",
+            "accessed_date": "2026-03-24"
+          },
+          "verified_date": "2026-03-24"
+        }
+      ],
+      "candidate_tags": {
+        "gregoire": {
+          "text": "✅ Compétence municipale",
+          "class": "tag-ok"
+        },
+        "dati": {
+          "text": "✅ Compétence municipale",
+          "class": "tag-ok"
+        },
+        "bournazel": {
+          "text": "✅ Compétence municipale",
+          "class": "tag-ok"
+        },
+        "knafo": {
+          "text": "✅ Compétence municipale",
+          "class": "tag-ok"
+        },
+        "chikirou": {
+          "text": "✅ Compétence municipale",
+          "class": "tag-ok"
+        },
+        "mariani": {
+          "text": "⚠️ Hors compétence municipale",
+          "class": "tag-warn"
+        }
+      },
+      "dimensions": [
+        {
+          "label": "🏫 Crèches (places / recrutement)",
+          "positions": {
+            "gregoire": {
+              "text": "Embauches massives pour améliorer le taux d'encadrement",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "dati": {
+              "text": "Interdiction d'un animateur seul avec un enfant (post-scandales 2025)",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "bournazel": {
+              "text": "Crèches en pied d'immeuble pour chaque nouveau projet immobilier",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "knafo": {
+              "text": "Ouvrir les <strong>7 000</strong> places vacantes, recruter <strong>1 200</strong> professionnels avec logements de fonction",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "chikirou": {
+              "text": "<strong>80</strong> maisons de quartier cogérées (crèche + social + activités)",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "mariani": {
+              "text": "Sécurisation des abords des écoles, tolérance zéro abus",
+              "verified_date": "2026-03-24",
+              "sources": []
+            }
+          }
+        },
+        {
+          "label": "🍽️ Cantine / alimentation",
+          "positions": {
+            "gregoire": {
+              "text": "Cantine gratuite pour milieux défavorisés (<strong>65%</strong> de soutien Ipsos)",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "dati": {
+              "text": "<em class=\"muted\">Non abordé</em>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "bournazel": {
+              "text": "Alimentation saine en cantine, plus de places en conservatoire",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "knafo": {
+              "text": "<em class=\"muted\">Non abordé</em>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "chikirou": {
+              "text": "Services publics de proximité polyvalents avec volet alimentaire",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "mariani": {
+              "text": "<em class=\"muted\">Non abordé</em>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            }
+          }
+        },
+        {
+          "label": "🛡️ Sécurité des enfants",
+          "positions": {
+            "gregoire": {
+              "text": "Meilleur encadrement, services gratuits pour les plus modestes",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "dati": {
+              "text": "<strong>Priorité</strong> post-scandales : interdiction d'un adulte seul avec un enfant",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "bournazel": {
+              "text": "Intégration urbanistique de la petite enfance",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "knafo": {
+              "text": "Résolution du problème de recrutement (loyers vs salaires)",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "chikirou": {
+              "text": "Cogestion citoyenne des structures",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "mariani": {
+              "text": "Port de l'uniforme, semaine de <strong>4 jours</strong>, discipline renforcée",
+              "verified_date": "2026-03-24",
+              "sources": []
+            }
+          }
+        }
+      ],
+      "analysis": {
+        "gregoire": {
+          "text": "Cantine gratuite : populaire et réaliste (<strong>~30-50 M€/an</strong>). Problème principal = recrutement (salaires vs coût de la vie).",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "dati": {
+          "text": "Interdiction adulte seul = plus de personnel = plus de budget — contradiction avec le gel budgétaire annoncé.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "bournazel": {
+          "text": "Crèche en pied d'immeuble existe dans certains PLU (Rennes, Lyon). Transposable via le PLU bioclimatique en révision.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "knafo": {
+          "text": "Analyse pertinente : le problème = recrutement, pas les places. Logements de fonction = solution innovante mais coûteuse (<strong>~60 M€/an</strong>).",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "chikirou": {
+          "text": "Maisons de quartier cogérées : modèle testé à Grenoble. Nécessite investissement fort en animation et formation citoyenne.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "mariani": {
+          "text": "Uniforme et rythme scolaire = compétence de l'État (Éducation nationale), pas du maire. Seule la sécurisation des abords = compétence municipale.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        }
+      },
+      "sources_per_candidate": {
+        "gregoire": [
+          {
+            "url": "https://www.lakoom.fr/municipales-a-paris-securite-logement-petite-enfance/",
+            "name": "Lakoom"
+          },
+          {
+            "url": "https://emmanuel-gregoire-2026.fr/programme/",
+            "name": "Programme E. Grégoire"
+          }
+        ],
+        "dati": [
+          {
+            "url": "https://www.lakoom.fr/municipales-a-paris-securite-logement-petite-enfance/",
+            "name": "Lakoom"
+          }
+        ],
+        "bournazel": [
+          {
+            "url": "https://www.lakoom.fr/municipales-a-paris-securite-logement-petite-enfance/",
+            "name": "Lakoom"
+          },
+          {
+            "url": "https://bournazel.paris/",
+            "name": "Programme P-Y. Bournazel"
+          }
+        ],
+        "knafo": [
+          {
+            "url": "https://www.sarahpourparis.fr/unevilleheureuse",
+            "name": "Programme S. Knafo"
+          }
+        ],
+        "chikirou": [
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ],
+        "mariani": [
+          {
+            "url": "https://www.mariani-2026.fr/Le-programme",
+            "name": "Programme T. Mariani"
+          }
+        ]
+      }
+    },
+    {
+      "id": "culture",
+      "name": "Culture & Patrimoine",
+      "icon": "🎭",
+      "stats": [
+        {
+          "value": "~400M€",
+          "label": "budget culture de Paris",
+          "source": {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Ville de Paris",
+            "accessed_date": "2026-03-24"
+          },
+          "verified_date": "2026-03-24"
+        },
+        {
+          "value": "1 100",
+          "label": "monuments historiques classés",
+          "source": {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Ministère Culture",
+            "accessed_date": "2026-03-24"
+          },
+          "verified_date": "2026-03-24"
+        }
+      ],
+      "candidate_tags": {
+        "gregoire": {
+          "text": "✅ Compétence municipale",
+          "class": "tag-ok"
+        },
+        "dati": {
+          "text": "✅ Compétence municipale",
+          "class": "tag-ok"
+        },
+        "bournazel": {
+          "text": "⚠️ Quasi-absent du programme",
+          "class": "tag-warn"
+        },
+        "knafo": {
+          "text": "✅ Compétence municipale",
+          "class": "tag-ok"
+        },
+        "chikirou": {
+          "text": "✅ Compétence municipale",
+          "class": "tag-ok"
+        },
+        "mariani": {
+          "text": "⚠️ Faisabilité juridique incertaine",
+          "class": "tag-warn"
+        }
+      },
+      "dimensions": [
+        {
+          "label": "🏛️ Patrimoine / esthétique urbaine",
+          "positions": {
+            "gregoire": {
+              "text": "Espaces culturels sur le foncier du périphérique (horizon long terme)",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "dati": {
+              "text": "Charte esthétique pour l'espace public, villa Médicis du design",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "bournazel": {
+              "text": "<em class=\"muted\">Quasi-absent du programme</em>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "knafo": {
+              "text": "<strong>Politique du beau</strong> : restaurer mobilier historique (bancs Davioud, réverbères, grilles en fonte)",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "chikirou": {
+              "text": "Maisons de quartier avec volet culturel",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "mariani": {
+              "text": "Charte d'urbanisme haussmannien renforcée, restauration du patrimoine",
+              "verified_date": "2026-03-24",
+              "sources": []
+            }
+          }
+        },
+        {
+          "label": "🎶 Vie culturelle et nocturne",
+          "positions": {
+            "gregoire": {
+              "text": "Libération de la vie nocturne, safe places dans les événements culturels",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "dati": {
+              "text": "Lieu culturel dans l'ex-mairie du 1er, <strong>2 000</strong> places supplémentaires en conservatoire",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "bournazel": {
+              "text": "<em class=\"muted\">Non abordé</em>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "knafo": {
+              "text": "<strong>12 mesures</strong> détaillées pour libérer la vie culturelle et festive",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "chikirou": {
+              "text": "Budget participatif culturel élargi",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "mariani": {
+              "text": "<em class=\"muted\">Non abordé — focus patrimoine</em>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            }
+          }
+        },
+        {
+          "label": "🎭 Accès / démocratisation",
+          "positions": {
+            "gregoire": {
+              "text": "Safe places, accessibilité des événements",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "dati": {
+              "text": "Réutilisation de lieux publics vacants pour la culture",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "bournazel": {
+              "text": "<em class=\"muted\">Non abordé</em>",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "knafo": {
+              "text": "Libération de la vie culturelle et festive",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "chikirou": {
+              "text": "Démocratisation participative, budget participatif culturel (<strong>~100 M€/an</strong> existant)",
+              "verified_date": "2026-03-24",
+              "sources": []
+            },
+            "mariani": {
+              "text": "Prioriser les <strong>Parisiens</strong> dans l'accès aux offres culturelles municipales",
+              "verified_date": "2026-03-24",
+              "sources": []
+            }
+          }
+        }
+      ],
+      "analysis": {
+        "gregoire": {
+          "text": "Foncier du périphérique = horizon <strong>10-15 ans</strong>. Safe places = mesure à coût faible, faisable à court terme.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "dati": {
+          "text": "Réutilisation bâtiments publics vacants = approche pragmatique et peu coûteuse. <strong>2 000</strong> places conservatoire = <strong>~20 M€/an</strong> supplémentaires.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "bournazel": {
+          "text": "L'absence de politique culturelle pour Paris est notable — 1re destination culturelle mondiale.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "knafo": {
+          "text": "Restauration mobilier historique : originale et faisable (<strong>50-100 M€</strong> sur 6 ans). Les 12 mesures festives sont détaillées et réalistes.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "chikirou": {
+          "text": "Budget participatif déjà parmi les plus importants au monde (<strong>~100 M€/an</strong>). Élargir au culturel = faisable mais peut fragmenter la politique culturelle.",
+          "verified_date": "2026-03-24",
+          "sources": []
+        },
+        "mariani": {
+          "text": "Charte haussmannienne = compétence PLU, faisable. Priorisation des Parisiens = potentiellement discriminatoire (droit européen).",
+          "verified_date": "2026-03-24",
+          "sources": []
+        }
+      },
+      "sources_per_candidate": {
+        "gregoire": [
+          {
+            "url": "https://emmanuel-gregoire-2026.fr/programme/",
+            "name": "Programme E. Grégoire"
+          }
+        ],
+        "dati": [
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ],
+        "bournazel": [
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ],
+        "knafo": [
+          {
+            "url": "https://www.sarahpourparis.fr/unevilleheureuse",
+            "name": "Programme S. Knafo"
+          }
+        ],
+        "chikirou": [
+          {
+            "url": "https://labo-paris.com/candidats/",
+            "name": "Labo Paris"
+          }
+        ],
+        "mariani": [
+          {
+            "url": "https://www.mariani-2026.fr/Le-programme",
+            "name": "Programme T. Mariani"
+          }
+        ]
+      }
+    }
+  ],
+  "synthese": {
+    "r1": {
+      "securite": {
+        "convergences": [
+          {
+            "text": "Tous reconnaissent la sécurité comme priorité",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Consensus sur l&#x27;augmentation des effectifs de police municipale",
+            "verified_date": "2026-03-24",
+            "sources": []
+          }
+        ],
+        "divergences": [
+          {
+            "text": "Armement : Grégoire et Chikirou contre, Dati pour (partiel)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Effectifs : 1 000 (Grégoire) vs 5 000 (Dati) — écart de ×5",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Approche : préventive (Grégoire, Chikirou) vs dissuasive (Dati)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          }
+        ]
+      },
+      "logement": {
+        "convergences": [
+          {
+            "text": "Tous reconnaissent la crise du logement parisien",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Consensus sur la rénovation du parc existant",
+            "verified_date": "2026-03-24",
+            "sources": []
+          }
+        ],
+        "divergences": [
+          {
+            "text": "Logement social : +100 000 (Chikirou) vs +60 000 (Grégoire) vs pas d&#x27;augmentation (Dati)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Encadrement des loyers : maintien/renforcement (Grégoire, Chikirou) vs assouplissement (Dati)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Préemptions : défendues (Grégoire, Chikirou) vs supprimées (Dati)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Airbnb : régulation forte (Grégoire, Chikirou) vs non abordé (Dati)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          }
+        ]
+      },
+      "proprete": {
+        "convergences": [
+          {
+            "text": "Unanimité sur le constat d&#x27;échec (84% jugent Paris sale)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Accord sur le renforcement des sanctions",
+            "verified_date": "2026-03-24",
+            "sources": []
+          }
+        ],
+        "divergences": [
+          {
+            "text": "Gestion : public renforcé (Chikirou) vs public optimisé (Grégoire) vs mixte/externalisé (Dati)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Remunicipalisation : uniquement Chikirou",
+            "verified_date": "2026-03-24",
+            "sources": []
+          }
+        ]
+      },
+      "transport": {
+        "convergences": [
+          {
+            "text": "Tous reconnaissent les problèmes de mobilité",
+            "verified_date": "2026-03-24",
+            "sources": []
+          }
+        ],
+        "divergences": [
+          {
+            "text": "Périphérique : maintien 50 km/h (Grégoire) vs retour 70 km/h (Dati)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Vélo : priorité (Grégoire, Chikirou) vs pro-voiture (Dati)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Gratuité des transports : uniquement Chikirou",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Métro 24h/24 : Grégoire pour (compétence IDFM)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          }
+        ]
+      },
+      "ecologie": {
+        "convergences": [
+          {
+            "text": "Tous mentionnent la végétalisation",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Accord sur la rénovation thermique",
+            "verified_date": "2026-03-24",
+            "sources": []
+          }
+        ],
+        "divergences": [
+          {
+            "text": "Ambition : Grégoire et Chikirou (300 ha d&#x27;espaces verts) vs Dati (conservation)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Dati : Plan Grand Chaud pragmatique mais moins ambitieux sur le climat",
+            "verified_date": "2026-03-24",
+            "sources": []
+          }
+        ]
+      },
+      "budget": {
+        "convergences": [
+          {
+            "text": "Tous reconnaissent le problème de la dette (9,3 Mds€)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          }
+        ],
+        "divergences": [
+          {
+            "text": "Investissement public (Grégoire, Chikirou) vs économies (Dati)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Dati : fin des préemptions (250 M€) mais nouvelles dépenses (700 M€+)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Chikirou : hausse fiscale sur les plus riches",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Grégoire : financement insuffisamment détaillé",
+            "verified_date": "2026-03-24",
+            "sources": []
+          }
+        ]
+      },
+      "enfance": {
+        "convergences": [
+          {
+            "text": "Consensus sur les difficultés de recrutement en crèche",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Accord sur la sécurité des enfants post-scandales 2025",
+            "verified_date": "2026-03-24",
+            "sources": []
+          }
+        ],
+        "divergences": [
+          {
+            "text": "Grégoire : cantine gratuite pour les défavorisés",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Dati : interdiction d&#x27;un adulte seul avec un enfant",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Chikirou : maisons de quartier cogérées (crèche + social)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          }
+        ]
+      },
+      "culture": {
+        "convergences": [
+          {
+            "text": "Accord sur la préservation du patrimoine",
+            "verified_date": "2026-03-24",
+            "sources": []
+          }
+        ],
+        "divergences": [
+          {
+            "text": "Dati : charte esthétique, villa Médicis du design, 2 000 places conservatoire",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Grégoire : vie nocturne, safe places, espaces culturels sur le périph (long terme)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Chikirou : démocratisation participative, budget participatif culturel",
+            "verified_date": "2026-03-24",
+            "sources": []
+          }
+        ]
+      }
+    },
+    "r2": {
+      "securite": {
+        "convergences": [
+          {
+            "text": "Tous reconnaissent la sécurité comme priorité",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Consensus sur l&#x27;augmentation des effectifs de police municipale",
+            "verified_date": "2026-03-24",
+            "sources": []
+          }
+        ],
+        "divergences": [
+          {
+            "text": "Armement : Grégoire et Chikirou contre, Dati pour (partiel)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Effectifs : 1 000 (Grégoire) vs 5 000 (Dati) — écart de ×5",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Approche : préventive (Grégoire, Chikirou) vs dissuasive (Dati)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          }
+        ]
+      },
+      "logement": {
+        "convergences": [
+          {
+            "text": "Tous reconnaissent la crise du logement parisien",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Consensus sur la rénovation du parc existant",
+            "verified_date": "2026-03-24",
+            "sources": []
+          }
+        ],
+        "divergences": [
+          {
+            "text": "Logement social : +100 000 (Chikirou) vs +60 000 (Grégoire) vs pas d&#x27;augmentation (Dati)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Encadrement des loyers : maintien/renforcement (Grégoire, Chikirou) vs assouplissement (Dati)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Préemptions : défendues (Grégoire, Chikirou) vs supprimées (Dati)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Airbnb : régulation forte (Grégoire, Chikirou) vs non abordé (Dati)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          }
+        ]
+      },
+      "proprete": {
+        "convergences": [
+          {
+            "text": "Unanimité sur le constat d&#x27;échec (84% jugent Paris sale)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Accord sur le renforcement des sanctions",
+            "verified_date": "2026-03-24",
+            "sources": []
+          }
+        ],
+        "divergences": [
+          {
+            "text": "Gestion : public renforcé (Chikirou) vs public optimisé (Grégoire) vs mixte/externalisé (Dati)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Remunicipalisation : uniquement Chikirou",
+            "verified_date": "2026-03-24",
+            "sources": []
+          }
+        ]
+      },
+      "transport": {
+        "convergences": [
+          {
+            "text": "Tous reconnaissent les problèmes de mobilité",
+            "verified_date": "2026-03-24",
+            "sources": []
+          }
+        ],
+        "divergences": [
+          {
+            "text": "Périphérique : maintien 50 km/h (Grégoire) vs retour 70 km/h (Dati)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Vélo : priorité (Grégoire, Chikirou) vs pro-voiture (Dati)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Gratuité des transports : uniquement Chikirou",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Métro 24h/24 : Grégoire pour (compétence IDFM)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          }
+        ]
+      },
+      "ecologie": {
+        "convergences": [
+          {
+            "text": "Tous mentionnent la végétalisation",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Accord sur la rénovation thermique",
+            "verified_date": "2026-03-24",
+            "sources": []
+          }
+        ],
+        "divergences": [
+          {
+            "text": "Ambition : Grégoire et Chikirou (300 ha d&#x27;espaces verts) vs Dati (conservation)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Dati : Plan Grand Chaud pragmatique mais moins ambitieux sur le climat",
+            "verified_date": "2026-03-24",
+            "sources": []
+          }
+        ]
+      },
+      "budget": {
+        "convergences": [
+          {
+            "text": "Tous reconnaissent le problème de la dette (9,3 Mds€)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          }
+        ],
+        "divergences": [
+          {
+            "text": "Investissement public (Grégoire, Chikirou) vs économies (Dati)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Dati : fin des préemptions (250 M€) mais nouvelles dépenses (700 M€+)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Chikirou : hausse fiscale sur les plus riches",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Grégoire : financement insuffisamment détaillé",
+            "verified_date": "2026-03-24",
+            "sources": []
+          }
+        ]
+      },
+      "enfance": {
+        "convergences": [
+          {
+            "text": "Consensus sur les difficultés de recrutement en crèche",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Accord sur la sécurité des enfants post-scandales 2025",
+            "verified_date": "2026-03-24",
+            "sources": []
+          }
+        ],
+        "divergences": [
+          {
+            "text": "Grégoire : cantine gratuite pour les défavorisés",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Dati : interdiction d&#x27;un adulte seul avec un enfant",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Chikirou : maisons de quartier cogérées (crèche + social)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          }
+        ]
+      },
+      "culture": {
+        "convergences": [
+          {
+            "text": "Accord sur la préservation du patrimoine",
+            "verified_date": "2026-03-24",
+            "sources": []
+          }
+        ],
+        "divergences": [
+          {
+            "text": "Dati : charte esthétique, villa Médicis du design, 2 000 places conservatoire",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Grégoire : vie nocturne, safe places, espaces culturels sur le périph (long terme)",
+            "verified_date": "2026-03-24",
+            "sources": []
+          },
+          {
+            "text": "Chikirou : démocratisation participative, budget participatif culturel",
+            "verified_date": "2026-03-24",
+            "sources": []
+          }
+        ]
+      }
+    }
+  }
+}
